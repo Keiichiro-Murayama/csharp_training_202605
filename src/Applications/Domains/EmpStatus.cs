@@ -1,63 +1,63 @@
 using src.Exceptions;
 namespace src.Applications.Domains;
 /// <summary>
-/// 所属部署を表すドメインオブジェクト
+/// 所雇用形態を表すドメインオブジェクト
 /// </summary>
-public class Department
+public class EmpStatus
 {
-    public int? Id { get; private set; }      // 部署Id
-    public string? Name { get; private set; } = string.Empty;    // 部署名
-    private const int MaxLength = 20; // 部署名の長さ
+    public int? Id { get; private set; }  = 0;    // 雇用形態Id
+    public string? Name { get; private set; } = string.Empty;    // 雇用形態名
+    private const int MaxLength = 20; //雇用形態名の長さ
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    /// <param name="id">部署Id</param>
-    /// <param name="name">部署名</param>
-    public Department(int? id, string? name)
+    /// <param name="id"雇用形態Id</param>
+    /// <param name="name"雇用形態名</param>
+    public EmpStatus(int? id, string? name)
     {
-        // 部署名のルール検証
-        validateDepartmentName(name);
+        //雇用形態名のルール検証
+        validateEmpStatusName(name);
         Id = id;
         Name = name;
     }
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    /// <param name="name">部署名</param>
-    public Department(string? name) : this(null, name) { }
+    /// <param name="name"雇用形態名</param>
+    public EmpStatus(string? name) : this(null, name) { }
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    /// <param name="id">部署Id</param>
+    /// <param name="id"雇用形態Id</param>
     /// <returns></returns>
-    public Department(int? id)
+    public EmpStatus(int? id)
     {
         Id = id;
     }
 
     /// <summary>
-    /// 部署名のルール検証
+    ///雇用形態名のルール検証
     /// </summary>
     /// <param name="name"></param>
-    private void validateDepartmentName(string? name)
+    private void validateEmpStatusName(string? name)
     {
         if (name is not null)
         {
             if (string.IsNullOrWhiteSpace(name))
-                throw new DomainException("部署名は必須です");
+                throw new DomainException("雇用形態名は必須です");
             if (name.Length > MaxLength)
-                throw new DomainException($"部署名は{MaxLength}文字以内で入力してください");
+                throw new DomainException($"雇用形態名は{MaxLength}文字以内で入力してください");
         }
     }
 
     /// <summary>
-    /// 部署名の変更
+    ///雇用形態名の変更
     /// </summary>
     /// <param name="name"></param>
     public void ChangeName(string? name)
     {
-        // 部署名のルール検証
-        validateDepartmentName(name);
+        //雇用形態名のルール検証
+        validateEmpStatusName(name);
         this.Name = name;
     }
 
@@ -69,10 +69,11 @@ public class Department
     public override bool Equals(object? obj)
     {
         if (ReferenceEquals(this, obj)) return true;
-        if (obj is not Department other) return false;
+        if (obj is not EmpStatus other) return false;
         return Id == other.Id;
     }
     public override int GetHashCode() => Id?.GetHashCode() ?? 0;
 
     public override string ToString() => $"{Id?.ToString() ?? "未登録"}: {Name}";
+
 }

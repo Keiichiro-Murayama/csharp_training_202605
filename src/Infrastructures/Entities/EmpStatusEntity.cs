@@ -4,8 +4,8 @@ namespace src.Infrastructures.Entities;
 /// <summary>
 /// EmpStatusを扱うEntity Framework Coreのエンティティクラス
 /// </summary>
-[Table("empStatus")]
-public class EmpStatus
+[Table("empstatus")]
+public class EmpStatusEntity
 {
     /// <summary>
     /// 雇用形態Id(主キー)

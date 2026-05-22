@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using src.Applications.Domains;
 namespace src.Infrastructures.Entities;
 /// <summary>
 /// 従業員テーブル(employee)を扱うEntity Framework Coreのエンティティクラス
@@ -26,13 +27,20 @@ public class EmployeeEntity
 
     /// <summary>EmpStatus（外部キー）</summary>
     [ForeignKey("emp_status_id")]
-    public string EmpStatusId { get; set; } = string.Empty;
+    // [Column("emp_status_id")]
+    public int? EmpStatusId { get; set; } = 0;
+    // public EmpStatus? empStatus{get;set;}
+
+    //na
 
     /// <summary>
     /// 所属部署Id(外部キー)
     /// </summary>
     [ForeignKey("dep_id")]
-    public int DepId { get; set; }
+    // [Column("dep_id")]
+    public int? DepId { get; set; } = 0;
+
+    // public Department? department{get;set;}
 
 
 }

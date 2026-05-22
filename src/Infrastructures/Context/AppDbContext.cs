@@ -8,6 +8,8 @@ public class AppDbContext : DbContext
     public DbSet<EmployeeEntity> Employees { get; set; }
     public DbSet<DepartmentEntity> Departments { get; set; }
 
+    public DbSet<EmpStatusEntity> EmpStatuses{get; set;}
+
     /// <summary>
     /// コンストラクタ
     /// </summary>
@@ -20,19 +22,19 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
 
-        // EmployeeEntityのモデル構成を定義    
-        modelBuilder.Entity<EmployeeEntity>()
-            .ToTable("department")    // itemテーブルにマッピング    
-            .HasKey(i => i.Id); // 主キー項目の定義
-        // テーブルの列とプロパティのマッピング
-        modelBuilder.Entity<EmployeeEntity>()
-            .Property(i => i.Id).HasColumnName("id");
-        modelBuilder.Entity<EmployeeEntity>()
-            .Property(i => i.Name).HasColumnName("name");
-        modelBuilder.Entity<EmployeeEntity>()
-            .Property(i => i.Email).HasColumnName("email");
-        modelBuilder.Entity<EmployeeEntity>()
-            .Property(i => i.EmpStatus).HasColumnName("empstatus");
+        // // EmployeeEntityのモデル構成を定義    
+        // modelBuilder.Entity<EmployeeEntity>()
+        //     .ToTable("department")    // itemテーブルにマッピング    
+        //     .HasKey(i => i.Id); // 主キー項目の定義
+        // // テーブルの列とプロパティのマッピング
+        // modelBuilder.Entity<EmployeeEntity>()
+        //     .Property(i => i.Id).HasColumnName("id");
+        // modelBuilder.Entity<EmployeeEntity>()
+        //     .Property(i => i.Name).HasColumnName("name");
+        // modelBuilder.Entity<EmployeeEntity>()
+        //     .Property(i => i.Email).HasColumnName("email");
+        // modelBuilder.Entity<EmployeeEntity>()
+        //     .Property(i => i.EmpStatus).HasColumnName("empstatus");
         //EmployeeとDepartmentの一対多のリレーション
         // modelBuilder.Entity<EmployeeEntity>()
         //     .HasOne(p = p.DepId)

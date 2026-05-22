@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using src.Applications.Domains;
 namespace src.Presentations.ViewModels;
@@ -13,6 +14,27 @@ public class EmployeeRegisterViewModel
     [Display(Name = "氏名")]
     [Required(ErrorMessage = "{0}は入力必須です。")]
     public string? Name { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Email
+    /// </summary>
+    [Display(Name = "Email")]
+    public string? Email { get; set; } = string.Empty;
+
+
+    /// <summary>
+    /// 雇用形態
+    /// </summary>
+    [Display(Name = "雇用形態")]
+    public int? EmpStatusId { get; set; } = 0;
+
+    
+    /// <summary>
+    /// 雇用形態
+    /// </summary>
+    [Display(Name = "雇用形態名")]
+    public string? EmpStatusName { get; set; } = string.Empty;
+
     /// <summary>
     /// 所属部署
     /// </summary>
@@ -46,11 +68,34 @@ public class EmployeeRegisterViewModel
         }
         Departments = selectItems;
     }
-    // 部署のリスト
-    public List<SelectListItem>? Departments { get; set; } = null;
 
-    public override string ToString()
+    /// <summary>
+    /// 雇用形態のリストをSelectListItemのリストに変換してプロパティに設定する
+    /// </summary>
+    /// <param name="empStatuses"></param>
+    public void SetEmpStatuses(List<EmpStatus> empStatuses)
     {
-        return $"Name={Name} , DeptId={DeptId} , DeptName={DeptName} , Departments={Departments}";
+        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< Start SetEmpStatuses >>>>>>>>>>>>>>>>>>>>>>");
+
+        // SelectListItemのリストを作成
+        var selectItems = new List<SelectListItem>();
+        foreach (var empStatus in empStatuses)
+        {
+            if (empStatus.Id.HasValue)
+            {
+                System.Console.WriteLine("<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>");
+
+                var item = new SelectListItem();
+                item.Value = empStatus.Id.Value.ToString();
+                item.Text = string.IsNullOrEmpty(empStatus.Name) ? "(名称未設定)" : empStatus.Name;
+                selectItems.Add(item);
+            }
+        }
+        EmpStatuses = selectItems;
     }
+
+    // 部署&雇用形態のリスト
+    public List<SelectListItem>? Departments { get; set; } = null;
+    public List<SelectListItem>? EmpStatuses { get; set; } = null;
+
 }
