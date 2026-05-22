@@ -1,0 +1,167 @@
+fullness@02-15-022:~/csharp_training_202605/src$ dotnet run
+Building...
+/home/fullness/csharp_training_202605/src/Infrastructures/Adapters/EmployeeEntityAdaptor.cs(53,13): warning CS8625: Cannot convert null literal to non-nullable reference type. [/home/fullness/csharp_training_202605/src/WebApp_HR.csproj]
+/home/fullness/csharp_training_202605/src/Presentations/EmployeeRegisterViewModelAdapter.cs(30,51): warning CS8604: Possible null reference argument for parameter 'email' in 'Employee.Employee(string name, string email, EmpStatus empStatus, Department? department)'. [/home/fullness/csharp_training_202605/src/WebApp_HR.csproj]
+/home/fullness/csharp_training_202605/src/Infrastructures/Repositories/EmployeeRepository.cs(62,16): warning CS8603: Possible null reference return. [/home/fullness/csharp_training_202605/src/WebApp_HR.csproj]
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5056
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/fullness/csharp_training_202605/src
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.name
+      FROM department AS d
+info: src.Presentations.Controllers.EmployeeRegisterController[0]
+      部署リストを設定
+<<<<<<<<<<<<<<<<<< StartPopulateEmpStatus >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< Start GetEmpStatuses >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< StartFindAll >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< Start TRY FINDALL >>>>>>>>>>>>>>>>>>>>>>
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT e.id, e.name
+      FROM empstatus AS e
+<<<<<<<<<<<<<<<<<< GetEntity >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< getResult >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< Start SetEmpStatuses >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>
+info: src.Presentations.Controllers.EmployeeRegisterController[0]
+      雇用形態リストを設定
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT d.id, d.name
+      FROM department AS d
+      WHERE d.id = @__id_0
+      LIMIT 1
+info: src.Presentations.Controllers.EmployeeRegisterController[0]
+      部署Id:1の部署を取得する
+<<<<<<<<<<<<<<<<<< START GET EMP BYID >>>>>>>>>>>>>>>>>>>>>>
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT e.id, e.name
+      FROM empstatus AS e
+      WHERE e.id = @__id_0
+      LIMIT 1
+<<<<<<<<<<<<<<<<<< GET EMP BYID SUCCESS >>>>>>>>>>>>>>>>>>>>>>
+info: src.Presentations.Controllers.EmployeeRegisterController[0]
+      雇用形態Id:1の雇用形態を取得する
+<<<<<<<<<<<<<<<<<< START RESTORE >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< FIN RESTORE department  >>>>>>>>>>>>>>>>>>>>>>
+正社員
+<<<<<<<<<<<<<<<<<< FIN RESTORE department empStatus >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< START REGISTER ON SERVICE >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< START ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<< FIN ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>
+entity:0,Ann,test@dogs.com, 1,1
+fail: Microsoft.EntityFrameworkCore.Database.Command[20102]
+      Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?', @p2='?', @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      INSERT INTO employee ("DepId", email, name, "EmpStatusId")
+      VALUES (@p0, @p1, @p2, @p3)
+      RETURNING id;
+fail: Microsoft.EntityFrameworkCore.Update[10000]
+      An exception occurred in the database while saving changes for context type 'src.Infrastructures.Context.AppDbContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Npgsql.PostgresException (0x80004005): 42703: column "DepId" of relation "employee" does not exist
+      
+      POSITION: 23
+         at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult()
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+         at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+        Exception data:
+          Severity: ERROR
+          SqlState: 42703
+          MessageText: column "DepId" of relation "employee" does not exist
+          Position: 23
+          File: parse_target.c
+          Line: 1065
+          Routine: checkInsertTargets
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Npgsql.PostgresException (0x80004005): 42703: column "DepId" of relation "employee" does not exist
+      
+      POSITION: 23
+         at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult()
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+         at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+        Exception data:
+          Severity: ERROR
+          SqlState: 42703
+          MessageText: column "DepId" of relation "employee" does not exist
+          Position: 23
+          File: parse_target.c
+          Line: 1065
+          Routine: checkInsertTargets
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+         at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+fail: src.Presentations.Middlewares.InternalExceptionLoggingMiddleware[0]
+      InternalException が発生しました
+      src.Exceptions.InternalException: 従業員の永続化ができませんでした。
+       ---> Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+       ---> Npgsql.PostgresException (0x80004005): 42703: column "DepId" of relation "employee" does not exist
+      
+      POSITION: 23
+         at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+         at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlDataReader.NextResult()
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+         at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+         at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+        Exception data:
+          Severity: ERROR
+          SqlState: 42703
+          MessageText: column "DepId" of relation "employee" does not exist
+          Position: 23
+          File: parse_target.c
+          Line: 1065
+          Routine: checkInsertTargets
+         --- End of inner exception stack trace ---Possible reasons for this include:
+  * You misspelled a built-in dotnet command.
+  * You intended to execute a .NET program, but dotnet-run　 does not exist.
+  * You intended to run a global tool, but a dotnet-prefixed executable with this name could not be found on the PATH.
