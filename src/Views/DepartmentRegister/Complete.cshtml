@@ -1,5 +1,5 @@
 @using src.Presentations.ViewModels
-@model EmployeeRegisterViewModel;
+@model DepartmentRegisterViewModel;
 @{
         ViewData["Title"] = "従業員登録(完了)";
 }
@@ -17,19 +17,7 @@
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.Name)</td>
                         <td>@Html.DisplayFor(m => m.Name)</td>
                     </tr>
-                    <tr>
-                        <td class="fw-bold">@Html.DisplayNameFor(m => m.Email)</td>
-                        <td>@Html.DisplayFor(m => m.Email)</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">@Html.DisplayNameFor(m => m.DepName)</td>
-                        <td>@Html.DisplayFor(m => m.DepName)</td>
-                    </tr>
-                    <tr>
-                        <td class="fw-bold">@Html.DisplayNameFor(m => m.EmpStatusName)</td>
-                        <td>@Html.DisplayFor(m => m.EmpStatusName)</td>
-                    </tr>
-                </tbody>
+
             </table>
             @*入力画面に戻る*@
             <a asp-action="Enter" asp-controller="EmployeeRegister" class="btn btn-primary mt-3">

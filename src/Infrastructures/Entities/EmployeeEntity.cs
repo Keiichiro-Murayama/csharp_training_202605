@@ -27,20 +27,17 @@ public class EmployeeEntity
 
     /// <summary>EmpStatus（外部キー）</summary>
     [ForeignKey("emp_status_id")]
-    // [Column("emp_status_id")]
+    [Column("emp_status_id")]
     public int? EmpStatusId { get; set; } = 0;
-    // public EmpStatus? empStatus{get;set;}
 
-    //na
 
     /// <summary>
     /// 所属部署Id(外部キー)
     /// </summary>
     [ForeignKey("dep_id")]
-    // [Column("dep_id")]
+    [Column("dep_id")]
     public int? DepId { get; set; } = 0;
 
-    // public Department? department{get;set;}
 
 
 }

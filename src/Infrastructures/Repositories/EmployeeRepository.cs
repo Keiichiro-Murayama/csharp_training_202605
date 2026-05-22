@@ -4,6 +4,7 @@ using src.Applications.Repositories;
 using src.Infrastructures.Adapters;
 using src.Exceptions;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+
 namespace src.Infrastructures.Repositories;
 /// <summary>
 /// ドメインオブジェクト:従業員のCRUD操作インターフェイスの実装

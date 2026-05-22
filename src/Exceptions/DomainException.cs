@@ -10,10 +10,5 @@ namespace src.Exceptions
        public DomainException(string message) : base(){}
        public DomainException(string message, Exception innerException)
             :base(message, innerException){}
-
-        
-
-    
-
     }
 }
