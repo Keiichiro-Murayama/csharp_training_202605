@@ -19,15 +19,15 @@ public class EmployeeRegisterViewModelAdapter : IRestorer<Employee, EmployeeRegi
         // Department(部署)を作成する
         System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START RESTORE >>>>>>>>>>>>>>>>>>>>>>");
 
-        var department = new Department(target.DepId!.Value,target.DepName);
+        var department = new Department(target.DepId, target.DepName);
         System.Console.WriteLine("<<<<<<<<<<<<<<<<<< FIN RESTORE department  >>>>>>>>>>>>>>>>>>>>>>");
         System.Console.WriteLine(target.EmpStatusName);
 
-        var empStatus =  new EmpStatus(target.EmpStatusId, target.EmpStatusName);
+        var empStatus = new EmpStatus(target.EmpStatusId, target.EmpStatusName);
         System.Console.WriteLine("<<<<<<<<<<<<<<<<<< FIN RESTORE department empStatus >>>>>>>>>>>>>>>>>>>>>>");
 
         // 登録するEmployee(従業員)を作成する
-        var employee = new Employee(target.Name!, target.Email, empStatus ,department);
+        var employee = new Employee(target.Name!, target.Email!, empStatus, department);
         return employee;
     }
 }

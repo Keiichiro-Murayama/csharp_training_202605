@@ -20,17 +20,17 @@
                         <td>@Html.DisplayFor(m => m.Email)</td>
                     </tr>
                     <tr>
-                         @*EmployeeRegisterViewModelのDepNameプロパティの値を表示する*@
+                        @*EmployeeRegisterViewModelのDepNameプロパティの値を表示する*@
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.DepName)</td>
                         <td>@Html.DisplayFor(m => m.DepName)</td>
                     </tr>
                     <tr>
-                         @*EmployeeRegisterViewModelのEmpNameプロパティの値を表示する*@
+                        @*EmployeeRegisterViewModelのEmpNameプロパティの値を表示する*@
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.EmpStatusName)</td>
                         <td>@Html.DisplayFor(m => m.EmpStatusName)</td>
                     </tr>
                 </tbody>
-            </table>    
+            </table>
 
             <form>
                 @*POSTリクエスト(Register/Back)に値を渡すためにhidden属性を使う*@
@@ -45,13 +45,9 @@
                 @*formaction/formmethod ボタンごとに送信先を変える*@
                 @*同じフォーム内で[登録]と[戻る]を分岐できる*@
                 <div class="text-center mt-4">
-                    <button type="submit"
-                        formaction="@Url.Action("Register", "EmployeeRegister")"
-                        formmethod="post"
+                    <button type="submit" formaction="@Url.Action("Register", "EmployeeRegister")" formmethod="post"
                         class="btn btn-primary">登録</button>
-                    <button type="submit"
-                        formaction="@Url.Action("Back", "EmployeeRegister")"
-                        formmethod="post"
+                    <button type="submit" formaction="@Url.Action("Back", "EmployeeRegister")" formmethod="post"
                         class="btn btn-secondary">戻る</button>
                 </div>
             </form>

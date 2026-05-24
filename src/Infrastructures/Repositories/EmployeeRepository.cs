@@ -19,7 +19,7 @@ public class EmployeeRepository : IEmployeeRepository
     /// ドメインモデル:従業員と従業員エンティティの相互変換インターフェイスの実装
     /// </summary>
     private readonly EmployeeEntityAdapter _adapter;
-    
+
     /// <summary>
     /// コンストラクタ
     /// </summary>
@@ -47,10 +47,10 @@ public class EmployeeRepository : IEmployeeRepository
             _context.Employees.Add(entity);
             _context.SaveChanges();
         }
-        catch (Exception e)
+        catch (Exception ex)
         {
             throw new InternalException(
-                "従業員の永続化ができませんでした。", e);
+                "従業員の永続化ができませんでした。", ex);
         }
     }
 

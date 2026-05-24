@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using src.Applications.Services;
 using src.Presentations.ViewModels;
+using src.Exceptions;
 namespace src.Presentations.Controllers;
 /// <summary>
 /// 従業員登録コントローラ
@@ -23,7 +24,7 @@ public class EmployeeRegisterController : Controller
     /// <summary>
     /// TempDataを通じて一時的にViewModelを保存・復元するためのクラス
     /// </summary>
-    private readonly  TempDataStore<EmployeeRegisterViewModel> _empDataStore;
+    private readonly TempDataStore<EmployeeRegisterViewModel> _empDataStore;
 
     /// <summary>
     /// コンストラクタ
@@ -55,7 +56,7 @@ public class EmployeeRegisterController : Controller
         // [戻る]ボタンへの対応
         // TempDataからEmployeeRegisterViewModelを取得する
         viewModel = _empDataStore.Load(this);
-        if (viewModel   == null)
+        if (viewModel == null)
         {
             // 従業員登録ViewModelを生成する
             viewModel = new EmployeeRegisterViewModel();
@@ -85,19 +86,30 @@ public class EmployeeRegisterController : Controller
             return View("Enter", viewModel);
         }
         // 選択された部署のIdで部署データを取得する
-        var department = _employeeRegisterService.GetById(viewModel.DepId ?? 0);
-        _logger.LogInformation($"部署Id:{viewModel.DepId ?? 0}の部署を取得する");
-        // ViewModelに部署名を設定する
-        viewModel.DepName = department.Name;
+        if (viewModel.DepId.HasValue)
+        {
+            var department = _employeeRegisterService.GetById(viewModel.DepId.Value);
+            _logger.LogInformation($"部署Id:{viewModel.DepId.Value}の部署を取得する");
+            // ViewModelに部署名を設定する
+            viewModel.DepName = department.Name;
+        }
+        else
+        {
+            viewModel.DepName = string.Empty;
+        }
 
-        //
-        // 選択された部署のIdで部署データを取得する
-        var empStatus = _employeeRegisterService.GetEmpStatusById(viewModel.EmpStatusId ?? 0);
-        _logger.LogInformation($"雇用形態Id:{viewModel.DepId ?? 0}の雇用形態を取得する");
-        // ViewModelに部署名を設定する
-        viewModel.EmpStatusName = empStatus.Name;
-
-
+        // 選択された雇用形態のIdで雇用形態データを取得する
+        if (viewModel.EmpStatusId.HasValue)
+        {
+            var empStatus = _employeeRegisterService.GetEmpStatusById(viewModel.EmpStatusId.Value);
+            _logger.LogInformation($"雇用形態Id:{viewModel.EmpStatusId.Value}の雇用形態を取得する");
+            // ViewModelに雇用形態名を設定する
+            viewModel.EmpStatusName = empStatus.Name;
+        }
+        else
+        {
+            viewModel.EmpStatusName = string.Empty;
+        }
 
         // 確認画面を表示する
         return View(viewModel);
@@ -136,9 +148,20 @@ public class EmployeeRegisterController : Controller
 
         // EmployeeRegisterFormをドメインモデル:Employeeに変換する
         var employee = _adapter.Restore(viewModel!);
-        // 新しい従業員を登録する
-        _employeeRegisterService.Register(employee);
-        return View(viewModel);
+        try
+        {
+            // 新しい従業員を登録する
+            _employeeRegisterService.Register(employee);
+            return View(viewModel);
+        }
+        catch (ExistsException ex)
+        {
+            ModelState.AddModelError("Email", ex.Message);
+            // 部署・雇用形態一覧を取得してViewModelに設定する(SelectListItem形式)
+            PopulateDepartments(viewModel);
+            PopulateEmpStatus(viewModel);
+            return View("Enter", viewModel);
+        }
     }
 
     /// <summary>
@@ -167,7 +190,7 @@ public class EmployeeRegisterController : Controller
         _logger.LogInformation("部署リストを設定");
     }
 
-        /// <summary>
+    /// <summary>
     /// 部署一覧を取得してViewModelに設定する(SelectListItem形式)
     /// </summary>
     private void PopulateEmpStatus(EmployeeRegisterViewModel viewModel)
@@ -179,5 +202,4 @@ public class EmployeeRegisterController : Controller
         viewModel.SetEmpStatuses(empstatus);
         _logger.LogInformation("雇用形態リストを設定");
     }
-
 }

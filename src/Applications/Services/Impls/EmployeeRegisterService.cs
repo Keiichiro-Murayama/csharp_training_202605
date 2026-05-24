@@ -67,7 +67,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     }
 
 
-        /// <summary>
+    /// <summary>
     /// 指定された部署Idの部署を取得する
     /// </summary>
     /// <param name="id">部署Id</param>
@@ -81,7 +81,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
         {
             System.Console.WriteLine("<<<<<<<<<<<<<<<<<< GET EMP BYID FAIL >>>>>>>>>>>>>>>>>>>>>>");
             throw new NotFoundException($"部署Id{id}に該当する部署は存在しません");
-            
+
         }
         System.Console.WriteLine("<<<<<<<<<<<<<<<<<< GET EMP BYID SUCCESS >>>>>>>>>>>>>>>>>>>>>>");
 
@@ -105,6 +105,10 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     /// <param name="employee"></param>
     public void Register(Employee employee)
     {
+        if (_context.Employees.Any(e => e.EmpEmail == employee.Email))
+        {
+            throw new ExistsException("既に登録されたEmailアドレスは使用できません。");
+        }
         try
         {
             System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START REGISTER ON SERVICE >>>>>>>>>>>>>>>>>>>>>>");
@@ -114,7 +118,7 @@ public class EmployeeRegisterService : IEmployeeRegisterService
             // 従業員の登録
             _employeeRepository.Create(employee);
             // トランザクションのコミット
-            _context.Database.CommitTransaction();   
+            _context.Database.CommitTransaction();
         }
         catch
         {

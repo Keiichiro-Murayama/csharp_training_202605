@@ -6,9 +6,9 @@ namespace src.Applications.Domains;
 public class Employee
 {
     public int? Id { get; private set; } // 社員Id
-    public string Name { get; private set; } = string.Empty; // 氏名
-    public string? Email { get; set; } //Eメール
-    public EmpStatus?  EmpStatus { get; set; }  //雇用形態
+    public string Name { get; private set; } // 氏名
+    public string Email { get; set; } //Eメール
+    public EmpStatus? EmpStatus { get; set; }  //雇用形態
     public Department? Department { get; private set; } // 所属部署（null可）
 
     private const int MaxLength = 20;
@@ -19,7 +19,7 @@ public class Employee
     /// <param name="id">社員Id</param>
     /// <param name="name">氏名</param>
     /// <param name="department">所属部署</param>
-    public Employee(int? id, string name, string email, EmpStatus empStatus, Department? department)
+    public Employee(int? id, string name, string email, EmpStatus? empStatus, Department? department)
     {
         ValidateName(name);
         Id = id;
@@ -29,12 +29,12 @@ public class Employee
         Department = department;
     }
 
-        /// <summary>
+    /// <summary>
     /// ID未定の社員を作成する場合のコンストラクタ
     /// </summary>
     /// <param name="name">氏名</param>
     /// <param name="department">所属部署</param>
-    public Employee(string name, string email, EmpStatus empStatus, Department? department)
+    public Employee(string name, string email, EmpStatus? empStatus, Department? department)
         : this(null, name, email, empStatus, department) { }
 
     /// <summary>

@@ -18,7 +18,9 @@ public class EmployeeRegisterViewModel
     /// <summary>
     /// Email
     /// </summary>
-    [Display(Name = "Email")]
+    [Display(Name = "メールアドレス")]
+    [EmailAddress(ErrorMessage = "メールアドレスの形式で入力してください。")]
+    [Required(ErrorMessage = "{0}は入力必須です。")]
     public string? Email { get; set; } = string.Empty;
 
 
@@ -26,9 +28,9 @@ public class EmployeeRegisterViewModel
     /// 雇用形態
     /// </summary>
     [Display(Name = "雇用形態")]
-    public int? EmpStatusId { get; set; } = 0;
+    public int? EmpStatusId { get; set; } = null;
 
-    
+
     /// <summary>
     /// 雇用形態
     /// </summary>
@@ -39,8 +41,7 @@ public class EmployeeRegisterViewModel
     /// 所属部署
     /// </summary>
     [Display(Name = "所属部署")]
-    [Required(ErrorMessage = "{0}は選択必須です。")]
-    public int? DepId { get; set; } = 0;
+    public int? DepId { get; set; } = null;
 
     /// <summary>
     /// 選択された部署名
