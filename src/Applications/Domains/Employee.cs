@@ -11,7 +11,9 @@ public class Employee
     public EmpStatus? EmpStatus { get; set; }  //雇用形態
     public Department? Department { get; private set; } // 所属部署（null可）
 
-    private const int MaxLength = 20;
+    private const int NameMaxLength = 20;
+    private const int EmailMaxLength = 20;
+
 
     /// <summary>
     /// コンストラクタ
@@ -44,8 +46,19 @@ public class Employee
     {
         if (string.IsNullOrWhiteSpace(name))
             throw new DomainException("氏名は必須です");
-        if (name.Length > MaxLength)
-            throw new DomainException($"氏名は{MaxLength}文字以内で入力してください");
+        if (name.Length > NameMaxLength)
+            throw new DomainException($"氏名は{NameMaxLength}文字以内で入力してください");
+    }
+    private void ValidateEmail(string email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            throw new DomainException("Emailは必須です。");
+        }
+        if (email.Length > EmailMaxLength)
+        {
+            throw new DomainException($"Emailは{EmailMaxLength}文字以内で入力したください。");
+        }
     }
 
     /// <summary>

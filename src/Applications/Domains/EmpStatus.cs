@@ -7,7 +7,7 @@ public class EmpStatus
 {
     public int? Id { get; private set; }  = 0;    // 雇用形態Id
     public string? Name { get; private set; } = string.Empty;    // 雇用形態名
-    private const int MaxLength = 20; //雇用形態名の長さ
+    private const int EmpStatusMaxLength = 20; //雇用形態の長さ
     /// <summary>
     /// コンストラクタ
     /// </summary>
@@ -43,10 +43,8 @@ public class EmpStatus
     {
         if (name is not null)
         {
-            if (string.IsNullOrWhiteSpace(name))
-                throw new DomainException("雇用形態名は必須です");
-            if (name.Length > MaxLength)
-                throw new DomainException($"雇用形態名は{MaxLength}文字以内で入力してください");
+            if (name.Length > EmpStatusMaxLength)
+                throw new DomainException($"雇用形態は{EmpStatusMaxLength}文字以内で入力してください");
         }
     }
 
