@@ -13,5 +13,6 @@ public class DepartmentRegisterViewModel
     /// </summary>
     [Display(Name = "部署名")]
     [Required(ErrorMessage = "{0}は入力必須です。")]
+    [StringLength(50, ErrorMessage ="{0}は{1}文字以内で入力してください")]
     public string Name { get; set; } = string.Empty;
 }
