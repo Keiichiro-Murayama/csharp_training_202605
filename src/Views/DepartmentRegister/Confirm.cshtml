@@ -10,7 +10,7 @@
             <table class="table table-hover">
                 <tbody>
                     <tr>
-                        @*EmployeeRegisterViewModelのNameプロパティの値を表示する*@
+                        @*DepartmentRegisterViewModelのNameプロパティの値を表示する*@
                         <td class="fw-bold">@Html.DisplayNameFor(m => m.Name)</td>
                         <td>@Html.DisplayFor(m => m.Name)</td>
                     </tr>
@@ -28,11 +28,11 @@
                 @*同じフォーム内で[登録]と[戻る]を分岐できる*@
                 <div class="text-center mt-4">
                     <button type="submit"
-                        formaction="@Url.Action("Register", "EmployeeRegister")"
+                        formaction="@Url.Action("Register", "DepartmentRegister")"
                         formmethod="post"
                         class="btn btn-primary">登録</button>
                     <button type="submit"
-                        formaction="@Url.Action("Back", "EmployeeRegister")"
+                        formaction="@Url.Action("Back", "DepartmentRegister")"
                         formmethod="post"
                         class="btn btn-secondary">戻る</button>
                 </div>

@@ -17,7 +17,7 @@ public interface IDepartmentRegisterService
     /// <param name="id">部署Id</param>
     /// <returns></returns>
     Department GetById(int id);
-    EmpStatus GetEmpStatusById(int id);
+  
     /// <summary>
     /// 新しい従業員を登録する
     /// </summary>

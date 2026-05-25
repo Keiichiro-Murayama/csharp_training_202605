@@ -24,6 +24,26 @@ public class DepartmentRepository : IDepartmentRepository
         _adapter = adapter;
     }
 
+    ///部署登録　
+    public void Create(Department department)
+    {
+                try
+        {
+            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
+
+            var entity = _adapter.Convert(department);
+            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< FIN ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
+            System.Console.WriteLine($"entity:{entity.DepId},{entity.DepName}");
+            _context.Departments.Add(entity);
+            _context.SaveChanges();
+        }
+        catch (Exception ex)
+        {
+            throw new InternalException(
+                "従業員の永続化ができませんでした。", ex);
+        }
+    }
+
     /// <summary>
     /// すべての部署を取得する
     /// </summary>
