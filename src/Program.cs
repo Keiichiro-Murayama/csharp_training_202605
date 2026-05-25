@@ -42,7 +42,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",                            // ルートの名前
     // URLパターン（省略時はHomeコントローラとIndexアクション）
-    pattern: "{controller=Home}/{action=Index}/{id?}"); 
+    pattern: "{controller=Home}/{action=Menu}/{id?}"); 
 
 // アプリケーションを起動し、リクエストの受付を開始する
 app.Run();
