@@ -1,20 +1,76 @@
 @* クラスの名前空間を指定する(C#と同じ) *@
 @using src.Presentations.ViewModels
 @* View が受け取るデータ型（ViewModel）を宣言asp-for はこの型のプロパティと結びつける *@
-@model EmployeeShowListViewModel;
+@model List<EmployeeShowListViewModel>;
 
 @{
     ViewData["Title"] = "従業員一覧";
 }
 <h2 class="text-center mt-4">@ViewData["Title"]</h2>
 
+<!-- Table styling -->
+<style>
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    th {
+        padding: 10px;
+        border-bottom: solid 4px #494c4b;
+        color: #494c4b
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: solid 1px #494c4b;
+    }
+
+
+    @* table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fafafa;
+    } *@
+</style>
+
+
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="col-md-4 col-sm-6">
-            @foreach (var Name in Model.Name){
-                @Html.DisplayFor(m=> Name )<br/>
-                <hr/>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>氏名</th>
+                <th>メールアドレス</th>
+                <th>所属部署</th>
+                <th>雇用形態</th>
+            </tr>
+            @foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.Id</td>
+                    <td>@emp.Name</td>
+                    <td>@emp.Email</td>
+                    <td>@emp.DepName</td>
+                    <td>@emp.EmpStatusName</td>
+                </tr>
             }
-        </div>
+        </table>
     </div>
 </div>

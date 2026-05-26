@@ -1,5 +1,6 @@
 using src.Applications.Adapters;
 using src.Applications.Domains;
+using src.Applications.Repositories;
 using src.Infrastructures.Entities;
 using src.Infrastructures.Repositories;
 namespace src.Infrastructures.Adapters;
@@ -11,10 +12,10 @@ namespace src.Infrastructures.Adapters;
 public class EmployeeEntityAdapter :
 IConverter<Employee, EmployeeEntity>, IRestorer<Employee, EmployeeEntity>
 {
-    private readonly DepartmentRepository _departmentRepository;
-    private readonly EmpStatusRepository _empStatusRepository;
+    private readonly IDepartmentRepository _departmentRepository;
+    private readonly IEmpStatusRepository _empStatusRepository;
 
-    public EmployeeEntityAdapter(DepartmentRepository departmentRepository, EmpStatusRepository empStatusRepository)
+    public EmployeeEntityAdapter(IDepartmentRepository departmentRepository, IEmpStatusRepository empStatusRepository)
     {
         _departmentRepository = departmentRepository;
         _empStatusRepository = empStatusRepository;
