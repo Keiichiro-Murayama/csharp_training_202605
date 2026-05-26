@@ -63,7 +63,6 @@ public static class DependencyExtension
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
         // ドメインオブジェクト:従業員ステータスのCRUD操作インターフェイス実装
         services.AddScoped<IEmpStatusRepository, EmpStatusRepository>();
-        //ドメインオブジェクト
         
     }
 
@@ -79,6 +78,8 @@ public static class DependencyExtension
         services.AddScoped<IDepartmentRegisterService, DepartmentRegisterService>();
         ///従業員一覧サービスインタフェースの実装
         services.AddScoped<IEmployeeShowListService, EmployeeShowListService>();
+        ///部署一覧サービスインタフェースの実装
+        services.AddScoped<IDepartmentShowListService, DepartmentShowListService>();
     
     }
 
@@ -105,6 +106,7 @@ public static class DependencyExtension
             provider =>
             new TempDataStore<DepartmentRegisterViewModel>("DepartmentRegisterViewModel")
         );
+
         // 従業員一覧ViewModelをドメインオブジェクト:部署に変換するアダプターインターフェイスの実装
         services.AddScoped<EmployeeShowListViewModelAdapter>();
         // TempDataへのEmployeeShowListViewの保存・復元するためのクラス
@@ -112,6 +114,15 @@ public static class DependencyExtension
         services.AddScoped(
             provider =>
             new TempDataStore<EmployeeShowListViewModel>("EmployeeShowListViewModel")
+        );
+
+        // 部署一覧ViewModelをドメインオブジェクト:部署に変換するアダプターインターフェイスの実装
+        services.AddScoped<DepartmentShowListViewModelAdapter>();
+        // TempDataへのDepartmentShowListViewの保存・復元するためのクラス
+        // コンストラクタを利用して明示的にDIコンテナにインスタンスを登録する
+        services.AddScoped(
+            provider =>
+            new TempDataStore<DepartmentShowListViewModel>("DepartmentShowListViewModel")
         );
     }
 }
