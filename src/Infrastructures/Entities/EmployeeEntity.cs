@@ -26,18 +26,22 @@ public class EmployeeEntity
     public string EmpEmail { get; set; } = string.Empty;
 
     /// <summary>EmpStatus（外部キー）</summary>
-    [ForeignKey("emp_status_id")]
+    // [ForeignKey("emp_status_id")]
     [Column("emp_status_id")]
     public int? EmpStatusId { get; set; }
+
+    [ForeignKey("EmpStatusId")]
+    public EmpStatusEntity? EmpStatusEntity{get; set;}
 
 
     /// <summary>
     /// 所属部署Id(外部キー)
     /// </summary>
-    [ForeignKey("dep_id")]
+    // [ForeignKey("dep_id")]
     [Column("dep_id")]
     public int? DepId { get; set; }
 
-
+    [ForeignKey("DepId")]
+    public DepartmentEntity? DepartmentEntity{get; set;}
 
 }
