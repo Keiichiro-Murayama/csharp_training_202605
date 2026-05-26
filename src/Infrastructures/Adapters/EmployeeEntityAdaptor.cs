@@ -1,6 +1,7 @@
 using src.Applications.Adapters;
 using src.Applications.Domains;
 using src.Infrastructures.Entities;
+using src.Infrastructures.Repositories;
 namespace src.Infrastructures.Adapters;
 /// <summary>
 /// ドメインオブジェクト:EmployeeとEmployeeEntityの相互変換インターフェイスの実装
@@ -10,6 +11,15 @@ namespace src.Infrastructures.Adapters;
 public class EmployeeEntityAdapter :
 IConverter<Employee, EmployeeEntity>, IRestorer<Employee, EmployeeEntity>
 {
+    private readonly DepartmentRepository _departmentRepository;
+    private readonly EmpStatusRepository _empStatusRepository;
+
+    public EmployeeEntityAdapter(DepartmentRepository departmentRepository, EmpStatusRepository empStatusRepository)
+    {
+        _departmentRepository = departmentRepository;
+        _empStatusRepository = empStatusRepository;
+    }
+
     /// <summary>
     /// ドメインオブジェクト:EmployeeをEmployeeEntityに変換する
     /// </summary>
@@ -17,15 +27,17 @@ IConverter<Employee, EmployeeEntity>, IRestorer<Employee, EmployeeEntity>
     /// <returns>EmployeeEntity</returns>
     public EmployeeEntity Convert(Employee domain)
     {
-        var entity = new EmployeeEntity{
+        var entity = new EmployeeEntity
+        {
             EmpName = domain.Name
-            
+
         };
         if (domain.Email != null)
         {
-            entity.EmpEmail=domain.Email;
+            entity.EmpEmail = domain.Email;
         }
-        if (domain.Id != null){
+        if (domain.Id != null)
+        {
             entity.EmpId = domain.Id.Value;
         }
         if (domain.EmpStatus != null)
@@ -35,7 +47,7 @@ IConverter<Employee, EmployeeEntity>, IRestorer<Employee, EmployeeEntity>
         if (domain.Department != null)
         {
             entity.DepId = domain.Department.Id;
-        }    
+        }
         return entity;
     }
 
@@ -46,12 +58,30 @@ IConverter<Employee, EmployeeEntity>, IRestorer<Employee, EmployeeEntity>
     /// <returns>ドメインオブジェクト:Employee</returns>
     public Employee Restore(EmployeeEntity target)
     {
+        //Employeeオブジェクトに渡すDepartmentobjectに変換
+        Department? foundDep ;
+        if (target.DepId is not null)
+        {
+            foundDep = _departmentRepository.FindById(target.DepId.Value);
+        } else
+        {
+            foundDep = null;
+        }
+        //Employeeオブジェクトに渡すDepartmentobjectに変換
+        EmpStatus? foundEmpStatus ;
+        if (target.EmpStatusId is not null)
+        {
+            foundEmpStatus = _empStatusRepository.FindById(target.EmpStatusId.Value);
+        } else
+        {
+            foundEmpStatus = null;
+        }
         var employee = new Employee(
             target.EmpId,
             target.EmpName,
             target.EmpEmail,
-            null,
-            null
+            foundEmpStatus,
+            foundDep
         );
         return employee;
     }

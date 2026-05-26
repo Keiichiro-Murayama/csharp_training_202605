@@ -4,6 +4,8 @@ using src.Applications.Repositories;
 using src.Infrastructures.Adapters;
 using src.Exceptions;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using Microsoft.EntityFrameworkCore;
+using src.Infrastructures.Entities;
 
 namespace src.Infrastructures.Repositories;
 /// <summary>
@@ -60,6 +62,15 @@ public class EmployeeRepository : IEmployeeRepository
     /// <returns></returns>
     public List<Employee> FindAll()
     {
-        return null;
+        List<EmployeeEntity> employeeEntityList = _context.Employees.ToList();
+
+        List<Employee> employeeList = new List<Employee>();
+        foreach (var employeeEntity in employeeEntityList)
+        {
+            Employee employee = _adapter.Restore(employeeEntity);
+            employeeList.Add(employee);
+        }
+
+        return employeeList;
     }
 }

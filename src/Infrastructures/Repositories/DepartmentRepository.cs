@@ -40,7 +40,7 @@ public class DepartmentRepository : IDepartmentRepository
         catch (Exception ex)
         {
             throw new InternalException(
-                "従業員の永続化ができませんでした。", ex);
+                "部署の永続化ができませんでした。", ex);
         }
     }
 
