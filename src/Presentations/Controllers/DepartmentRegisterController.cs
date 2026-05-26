@@ -127,7 +127,7 @@ public class DepartmentRegisterController : Controller
         }
         catch (ExistsException ex)
         {
-            ModelState.AddModelError("Name", ex.Message);
+            TempData["ErrorMessage"] = ex.Message;
             return View("Enter", viewModel);
         }
     }

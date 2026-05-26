@@ -24,7 +24,7 @@ public class EmployeeRegisterController : Controller
     /// <summary>
     /// TempDataを通じて一時的にViewModelを保存・復元するためのクラス
     /// </summary>
-    private readonly TempDataStore<EmployeeRegisterViewModel> _empDataStore;
+    private readonly TempDataStore<EmployeeRegisterViewModel> _tempDataStore;
 
     /// <summary>
     /// コンストラクタ
@@ -32,17 +32,17 @@ public class EmployeeRegisterController : Controller
     /// <param name="logger">ロガー</param>
     /// <param name="employeeRegisterService">従業員登録サービスインターフェイス</param>
     /// <param name="employeeRegisterViewModelAdapter">従業員登録ViewModelをEmployeeに変換するアダプター</param>
-    /// <param name="empDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
+    /// <param name="tempDataStore">TempDataを通じて一時的にViewModelを保存・復元するためのクラス</param>
     public EmployeeRegisterController(
         ILogger<EmployeeRegisterController> logger,
         IEmployeeRegisterService employeeRegisterService,
         EmployeeRegisterViewModelAdapter employeeRegisterViewModelAdapter,
-        TempDataStore<EmployeeRegisterViewModel> empDataStore)
+        TempDataStore<EmployeeRegisterViewModel> tempDataStore)
     {
         _logger = logger;
         _employeeRegisterService = employeeRegisterService;
         _adapter = employeeRegisterViewModelAdapter;
-        _empDataStore = empDataStore;
+        _tempDataStore = tempDataStore;
     }
 
     /// <summary>
@@ -55,7 +55,7 @@ public class EmployeeRegisterController : Controller
         EmployeeRegisterViewModel? viewModel = null;
         // [戻る]ボタンへの対応
         // TempDataからEmployeeRegisterViewModelを取得する
-        viewModel = _empDataStore.Load(this);
+        viewModel = _tempDataStore.Load(this);
         if (viewModel == null)
         {
             // 従業員登録ViewModelを生成する
@@ -124,7 +124,7 @@ public class EmployeeRegisterController : Controller
     public IActionResult Register(EmployeeRegisterViewModel viewModel)
     {
         // EmployeeRegisterViewModelをシリアライズして、TempDataに保存する
-        _empDataStore.Save(this, viewModel);
+        _tempDataStore.Save(this, viewModel);
         // 登録処理GETアクションメソッドにリダイレクトする
         return RedirectToAction("Complete");
     }
@@ -139,7 +139,7 @@ public class EmployeeRegisterController : Controller
     {
         EmployeeRegisterViewModel? viewModel = null;
         // TempDataからEmployeeRegisterViewModelを取得する
-        viewModel = _empDataStore.Load(this);
+        viewModel = _tempDataStore.Load(this);
         if (viewModel == null)
         {
             // データが存在しない場合、入力画面にリダイレクト
@@ -156,7 +156,7 @@ public class EmployeeRegisterController : Controller
         }
         catch (ExistsException ex)
         {
-            ModelState.AddModelError("Email", ex.Message);
+            TempData["ErrorMessage"] = ex.Message;
             // 部署・雇用形態一覧を取得してViewModelに設定する(SelectListItem形式)
             PopulateDepartments(viewModel);
             PopulateEmpStatus(viewModel);
@@ -173,7 +173,7 @@ public class EmployeeRegisterController : Controller
     {
         _logger.LogInformation("[戻る]ボタンクリック:{0}", viewModel!.ToString());
         // EmployeeRegisterViewModelをシリアライズして、TempDataに保存する
-        _empDataStore.Save(this, viewModel);
+        _tempDataStore.Save(this, viewModel);
         // 入力画面を出力するアクションメソッドにリダイレクトする
         return RedirectToAction("Enter");
     }

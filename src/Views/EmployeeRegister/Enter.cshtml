@@ -2,6 +2,7 @@
 @using src.Presentations.ViewModels
 @* View が受け取るデータ型（ViewModel）を宣言asp-for はこの型のプロパティと結びつける *@
 @model EmployeeRegisterViewModel;
+
 @{
     ViewData["Title"] = "従業員登録 - 入力";
 }
@@ -23,7 +24,11 @@
                     @* Tag Helperがname属性やid属性を自動生成 Model Bindingに必要なHTMLが作成される*@
                     <label asp-for="Email" class="form-label"></label>
                     <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    @* <span asp-validation-for="Email" class="text-danger"></span> *@
+                    @if (TempData["ErrorMessage"] is not null)
+                    {
+                        <span class="text-danger">@TempData["ErrorMessage"]</span>
+                    }
 
                 </div>
                 <div class="mb-3">
@@ -32,7 +37,7 @@
                     <select asp-for="DepId" asp-items="Model.Departments" class="form-control">
                         <option value="">--未選択--</option>
                     </select>
-                    <span asp-validation-for="DepId" class="text-danger"></span>
+
                 </div>
                 <div class="mb-3">
                     <label asp-for="EmpStatusId" class="form-label"></label>
@@ -40,7 +45,6 @@
                     <select asp-for="EmpStatusId" asp-items="Model.EmpStatuses" class="form-control">
                         <option value="">--未選択--</option>
                     </select>
-                    <span asp-validation-for="EmpStatusId" class="text-danger"></span>
                 </div>
 
                 <div class="text-center">
