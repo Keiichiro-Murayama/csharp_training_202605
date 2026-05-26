@@ -1,0 +1,49 @@
+@* クラスの名前空間を指定する(C#と同じ) *@
+@using src.Presentations.ViewModels
+@* View が受け取るデータ型（ViewModel）を宣言asp-for はこの型のプロパティと結びつける *@
+@model List<DepartmentShowListViewModel>;
+
+@{
+    ViewData["Title"] = "部署一覧";
+}
+<h2 class="text-center mt-4">@ViewData["Title"]</h2>
+
+<!-- Table styling -->
+<style>
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    th {
+        padding: 10px;
+        border-bottom: solid 4px #494c4b;
+        color: #494c4b
+    }
+
+    td {
+        padding: 10px;
+        border-bottom: solid 1px #494c4b;
+    }
+</style>
+
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>部署名</th>
+            </tr>
+            @foreach (var dep in Model)
+            {
+                <tr>
+                    <td>@dep.Id</td>
+                    <td>@dep.Name</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
