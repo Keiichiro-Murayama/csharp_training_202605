@@ -72,10 +72,11 @@ public class EmployeeRepository : IEmployeeRepository
 
             if (employeeEntityList.Count == 0)
             {
-                throw new InternalException("登録された従業員記録はありません");
+                throw new InternalException("登録された従業員記録はありません。");
             }
             return employeeList;
         }
+        catch(InternalException){throw;}
         catch (Exception e)
         {
             throw new InternalException("すべての部署を取得できませんでした。", e);
