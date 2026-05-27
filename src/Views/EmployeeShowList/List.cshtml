@@ -54,22 +54,8 @@
                             <td>@emp.Id</td>
                             <td>@emp.Name</td>
                             <td>@emp.Email</td>
-                            @if (emp.DepName is null)
-                            {
-                                <td>-</td>
-                            }
-                            else
-                            {
-                                <td>@emp.DepName</td>
-                            }
-                            @if (emp.EmpStatusName is null)
-                            {
-                                <td>-</td>
-                            }
-                            else
-                            {
-                                <td>@emp.EmpStatusName</td>
-                            }
+                            <td>@(emp.DepName)</td>
+                            <td>@(emp.EmpStatusName)</td>
                         </tr>
                     }
                 </tbody>

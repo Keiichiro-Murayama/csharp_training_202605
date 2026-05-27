@@ -17,7 +17,7 @@ public class EmployeeShowListViewModelAdapter : IConverter<Employee, EmployeeSho
     public EmployeeShowListViewModel Convert(Employee target)
     {
         // 登録するEmployee(従業員)を作成する
-        var employee = new EmployeeShowListViewModel(target.Id, target.Name, target.Email, target.EmpStatus?.Name, target.Department?.Name);
+        var employee = new EmployeeShowListViewModel(target.Id, target.Name, target.Email, target.EmpStatus?.Name ?? "-", target.Department?.Name ?? "-");
         return employee;
     }
 }
