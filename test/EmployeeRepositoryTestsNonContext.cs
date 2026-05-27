@@ -15,7 +15,7 @@ namespace test;
 
 [DoNotParallelize]
 [TestClass]
-public class EmployeeRepositoryTestsNullTable
+public class EmployeeRepositoryTestsNonContext
 {
     private const string ConnectionString =
     "Host=localhost;Port=5432;Database=csharp_training_202605;Username=postgres;Password=training;";
@@ -29,7 +29,7 @@ public class EmployeeRepositoryTestsNullTable
     public void Setup()
     {
         var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseNpgsql(ConnectionString)
+            .UseNpgsql()
             // ConnectionStringを外す
             .Options;
 
@@ -41,22 +41,37 @@ public class EmployeeRepositoryTestsNullTable
         _empStatusRepository = new EmpStatusRepository(_context, empStatusAdapter);
         var employeeAdapter = new EmployeeEntityAdapter(_departmentRepository, _empStatusRepository);
 
-        var path = Path.Combine(AppContext.BaseDirectory, "sql", "init_null.sql");
+        var path = Path.Combine(AppContext.BaseDirectory, "sql", "init.sql");
         var sql = File.ReadAllText(path);
-        _context.Database.ExecuteSqlRaw(sql);
+        // _context.Database.ExecuteSqlRaw(sql);
 
         _repository = new EmployeeRepository(_context, employeeAdapter);
     }
 
-        [TestMethod]
-    public void FindAll_NonHit()
+    [TestMethod]
+    public void Create_NonContext()
+    {
+        var empStatus1 = new EmpStatus(1, "正社員");
+        var department1 = new Department(1, "人事部");
+        var employee1 = new Employee("桜井理", "Osamu@test.com", empStatus1, department1);
+
+        var ex = Assert.ThrowsException<InternalException>(() =>
+        {
+            _repository.Create(employee1);
+        }
+        );
+        Assert.AreEqual("従業員の永続化ができませんでした。", ex.Message);
+    }
+
+    [TestMethod]
+    public void FindAll_NonContext()
     {
         var ex = Assert.ThrowsException<InternalException>(() =>
         {
             _repository.FindAll();
         }
         );
-        Assert.AreEqual("登録された従業員記録はありません。", ex.Message);
+        Assert.AreEqual("すべての従業員を取得できませんでした。", ex.Message);
     }
 
 }

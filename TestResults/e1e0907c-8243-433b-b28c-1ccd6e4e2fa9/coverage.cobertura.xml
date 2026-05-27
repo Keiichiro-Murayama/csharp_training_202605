@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.2825" branch-rate="0.20829999999999999" version="1.9" timestamp="1779855944" lines-covered="228" lines-valid="807" branches-covered="35" branches-valid="168">
+<coverage line-rate="0.2985" branch-rate="0.20829999999999999" version="1.9" timestamp="1779866987" lines-covered="243" lines-valid="814" branches-covered="35" branches-valid="168">
   <sources>
     <source>/home/fullness/csharp_training_202605/src/</source>
   </sources>
   <packages>
-    <package name="src" line-rate="0.2825" branch-rate="0.20829999999999999" complexity="274">
+    <package name="src" line-rate="0.2985" branch-rate="0.20829999999999999" complexity="274">
       <classes>
         <class name="Program" filename="Program.cs" line-rate="0" branch-rate="0" complexity="2">
           <methods>
@@ -524,6 +524,362 @@
             <line number="14" hits="0" branch="False" />
           </lines>
         </class>
+        <class name="src.Presentations.ViewModels.DepartmentRegisterViewModel" filename="Presentations/ViewModels/DepartmentRegisterViewModel.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.DepartmentRegisterViewModelAdapter" filename="Presentations/ViewModels/DepartmentRegisterViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Restore" signature="(src.Presentations.ViewModels.DepartmentRegisterViewModel)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.DepartmentShowListViewModel" filename="Presentations/ViewModels/DepartmentShowListViewModel.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.DepartmentShowListViewModelAdapter" filename="Presentations/ViewModels/DepartmentShowListViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Convert" signature="(src.Applications.Domains.Department)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="20" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="0" branch="False" />
+            <line number="20" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.EmployeeRegisterViewModel" filename="Presentations/ViewModels/EmployeeRegisterViewModel.cs" line-rate="0" branch-rate="0" complexity="20">
+          <methods>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EmpStatusId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="33" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EmpStatusName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="40" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DepId" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="46" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DepName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="SetDepartments" signature="(System.Collections.Generic.List`1&lt;src.Applications.Domains.Department&gt;)" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="59" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+                <line number="62" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="137" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="43" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+                <line number="67" hits="0" branch="False" />
+                <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="98" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="73" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="SetEmpStatuses" signature="(System.Collections.Generic.List`1&lt;src.Applications.Domains.EmpStatus&gt;)" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="0" branch="False" />
+                <line number="84" hits="0" branch="False" />
+                <line number="85" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="159" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="86" hits="0" branch="False" />
+                <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="54" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="88" hits="0" branch="False" />
+                <line number="89" hits="0" branch="False" />
+                <line number="91" hits="0" branch="False" />
+                <line number="92" hits="0" branch="False" />
+                <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="120" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="94" hits="0" branch="False" />
+                <line number="95" hits="0" branch="False" />
+                <line number="96" hits="0" branch="False" />
+                <line number="97" hits="0" branch="False" />
+                <line number="98" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Departments" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="101" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EmpStatuses" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="102" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+            <line number="62" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="137" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="43" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+            <line number="67" hits="0" branch="False" />
+            <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="98" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="73" hits="0" branch="False" />
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="0" branch="False" />
+            <line number="84" hits="0" branch="False" />
+            <line number="85" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="159" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="86" hits="0" branch="False" />
+            <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="54" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="88" hits="0" branch="False" />
+            <line number="89" hits="0" branch="False" />
+            <line number="91" hits="0" branch="False" />
+            <line number="92" hits="0" branch="False" />
+            <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="120" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="94" hits="0" branch="False" />
+            <line number="95" hits="0" branch="False" />
+            <line number="96" hits="0" branch="False" />
+            <line number="97" hits="0" branch="False" />
+            <line number="98" hits="0" branch="False" />
+            <line number="101" hits="0" branch="False" />
+            <line number="102" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.EmployeeRegisterViewModelAdapter" filename="Presentations/ViewModels/EmployeeRegisterViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Restore" signature="(src.Presentations.ViewModels.EmployeeRegisterViewModel)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="21" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="0" branch="False" />
+            <line number="21" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.EmployeeShowListViewModel" filename="Presentations/ViewModels/EmployeeShowListViewModel.cs" line-rate="0" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_EmpStatusName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_DepName" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="0" branch="False" />
+                <line number="23" hits="0" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="0" branch="False" />
+                <line number="27" hits="0" branch="False" />
+                <line number="28" hits="0" branch="False" />
+                <line number="29" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="False" />
+            <line number="13" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+            <line number="23" hits="0" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="0" branch="False" />
+            <line number="27" hits="0" branch="False" />
+            <line number="28" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="src.Presentations.ViewModels.EmployeeShowListViewModelAdapter" filename="Presentations/ViewModels/EmployeeShowListViewModelAdapter.cs" line-rate="0" branch-rate="0" complexity="4">
+          <methods>
+            <method name="Convert" signature="(src.Applications.Domains.Employee)" line-rate="0" branch-rate="0" complexity="4">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+                <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
+                  <conditions>
+                    <condition number="26" type="jump" coverage="0%" />
+                    <condition number="44" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="0" branch="False" />
+                <line number="22" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="0" branch="False" />
+            <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
+              <conditions>
+                <condition number="26" type="jump" coverage="0%" />
+                <condition number="44" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="21" hits="0" branch="False" />
+            <line number="22" hits="0" branch="False" />
+          </lines>
+        </class>
         <class name="src.Presentations.Middlewares.InternalExceptionLoggingMiddleware" filename="Presentations/Middlewares/internalExceptionLoggingMiddleware.cs" line-rate="0" branch-rate="1" complexity="1">
           <methods>
             <method name=".ctor" signature="(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger`1&lt;src.Presentations.Middlewares.InternalExceptionLoggingMiddleware&gt;)" line-rate="0" branch-rate="1" complexity="1">
@@ -714,362 +1070,6 @@
             <line number="125" hits="0" branch="False" />
             <line number="126" hits="0" branch="False" />
             <line number="127" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.DepartmentRegisterViewModelAdapter" filename="Presentations/DepartmentRegisterViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="Restore" signature="(src.Presentations.ViewModels.DepartmentRegisterViewModel)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.DepartmentShowListViewModelAdapter" filename="Presentations/DepartmentShowListViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="Convert" signature="(src.Applications.Domains.Department)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="20" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="20" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.EmployeeRegisterViewModelAdapter" filename="Presentations/EmployeeRegisterViewModelAdapter.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="Restore" signature="(src.Presentations.ViewModels.EmployeeRegisterViewModel)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="21" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="21" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.EmployeeShowListViewModelAdapter" filename="Presentations/EmployeeShowListViewModelAdapter.cs" line-rate="0" branch-rate="0" complexity="4">
-          <methods>
-            <method name="Convert" signature="(src.Applications.Domains.Employee)" line-rate="0" branch-rate="0" complexity="4">
-              <lines>
-                <line number="18" hits="0" branch="False" />
-                <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
-                  <conditions>
-                    <condition number="26" type="jump" coverage="0%" />
-                    <condition number="44" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="21" hits="0" branch="False" />
-                <line number="22" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="18" hits="0" branch="False" />
-            <line number="20" hits="0" branch="True" condition-coverage="0% (0/4)">
-              <conditions>
-                <condition number="26" type="jump" coverage="0%" />
-                <condition number="44" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="21" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.DepartmentRegisterViewModel" filename="Presentations/ViewModels/DepartmentRegisterViewModel.cs" line-rate="0" branch-rate="1" complexity="1">
-          <methods>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="17" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="17" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.DepartmentShowListViewModel" filename="Presentations/ViewModels/DepartmentShowListViewModel.cs" line-rate="0" branch-rate="1" complexity="3">
-          <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="10" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="14" hits="0" branch="False" />
-                <line number="15" hits="0" branch="False" />
-                <line number="16" hits="0" branch="False" />
-                <line number="17" hits="0" branch="False" />
-                <line number="18" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="10" hits="0" branch="False" />
-            <line number="11" hits="0" branch="False" />
-            <line number="14" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="16" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="18" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.EmployeeRegisterViewModel" filename="Presentations/ViewModels/EmployeeRegisterViewModel.cs" line-rate="0" branch-rate="0" complexity="20">
-          <methods>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="17" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="26" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_EmpStatusId" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="33" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_EmpStatusName" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="40" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_DepId" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="46" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_DepName" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="52" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="SetDepartments" signature="(System.Collections.Generic.List`1&lt;src.Applications.Domains.Department&gt;)" line-rate="0" branch-rate="0" complexity="6">
-              <lines>
-                <line number="59" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="62" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="137" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="63" hits="0" branch="False" />
-                <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="43" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="65" hits="0" branch="False" />
-                <line number="66" hits="0" branch="False" />
-                <line number="67" hits="0" branch="False" />
-                <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="98" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="69" hits="0" branch="False" />
-                <line number="70" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="73" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="SetEmpStatuses" signature="(System.Collections.Generic.List`1&lt;src.Applications.Domains.EmpStatus&gt;)" line-rate="0" branch-rate="0" complexity="6">
-              <lines>
-                <line number="80" hits="0" branch="False" />
-                <line number="81" hits="0" branch="False" />
-                <line number="84" hits="0" branch="False" />
-                <line number="85" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="159" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="54" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
-                <line number="91" hits="0" branch="False" />
-                <line number="92" hits="0" branch="False" />
-                <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
-                  <conditions>
-                    <condition number="120" type="jump" coverage="0%" />
-                  </conditions>
-                </line>
-                <line number="94" hits="0" branch="False" />
-                <line number="95" hits="0" branch="False" />
-                <line number="96" hits="0" branch="False" />
-                <line number="97" hits="0" branch="False" />
-                <line number="98" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Departments" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="101" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_EmpStatuses" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="102" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="17" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="33" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="52" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="62" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="137" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="63" hits="0" branch="False" />
-            <line number="64" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="43" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="65" hits="0" branch="False" />
-            <line number="66" hits="0" branch="False" />
-            <line number="67" hits="0" branch="False" />
-            <line number="68" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="98" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="69" hits="0" branch="False" />
-            <line number="70" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="73" hits="0" branch="False" />
-            <line number="80" hits="0" branch="False" />
-            <line number="81" hits="0" branch="False" />
-            <line number="84" hits="0" branch="False" />
-            <line number="85" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="159" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="54" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
-            <line number="91" hits="0" branch="False" />
-            <line number="92" hits="0" branch="False" />
-            <line number="93" hits="0" branch="True" condition-coverage="0% (0/2)">
-              <conditions>
-                <condition number="120" type="jump" coverage="0%" />
-              </conditions>
-            </line>
-            <line number="94" hits="0" branch="False" />
-            <line number="95" hits="0" branch="False" />
-            <line number="96" hits="0" branch="False" />
-            <line number="97" hits="0" branch="False" />
-            <line number="98" hits="0" branch="False" />
-            <line number="101" hits="0" branch="False" />
-            <line number="102" hits="0" branch="False" />
-          </lines>
-        </class>
-        <class name="src.Presentations.ViewModels.EmployeeShowListViewModel" filename="Presentations/ViewModels/EmployeeShowListViewModel.cs" line-rate="0" branch-rate="1" complexity="6">
-          <methods>
-            <method name="get_Id" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="11" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Name" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="13" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Email" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="15" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_EmpStatusName" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="17" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name="get_DepName" signature="()" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="19" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String,System.String,System.String,System.String)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="22" hits="0" branch="False" />
-                <line number="23" hits="0" branch="False" />
-                <line number="24" hits="0" branch="False" />
-                <line number="25" hits="0" branch="False" />
-                <line number="26" hits="0" branch="False" />
-                <line number="27" hits="0" branch="False" />
-                <line number="28" hits="0" branch="False" />
-                <line number="29" hits="0" branch="False" />
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="11" hits="0" branch="False" />
-            <line number="13" hits="0" branch="False" />
-            <line number="15" hits="0" branch="False" />
-            <line number="17" hits="0" branch="False" />
-            <line number="19" hits="0" branch="False" />
-            <line number="22" hits="0" branch="False" />
-            <line number="23" hits="0" branch="False" />
-            <line number="24" hits="0" branch="False" />
-            <line number="25" hits="0" branch="False" />
-            <line number="26" hits="0" branch="False" />
-            <line number="27" hits="0" branch="False" />
-            <line number="28" hits="0" branch="False" />
-            <line number="29" hits="0" branch="False" />
           </lines>
         </class>
         <class name="src.Presentations.Controllers.DepartmentRegisterController" filename="Presentations/Controllers/DepartmentRegisterController.cs" line-rate="0" branch-rate="0" complexity="9">
@@ -1696,113 +1696,115 @@
             <line number="24" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="src.Infrastructures.Repositories.DepartmentRepository" filename="Infrastructures/Repositories/DepartmentRepository.cs" line-rate="0.909" branch-rate="1" complexity="8">
+        <class name="src.Infrastructures.Repositories.DepartmentRepository" filename="Infrastructures/Repositories/DepartmentRepository.cs" line-rate="1" branch-rate="1" complexity="8">
           <methods>
             <method name="Create" signature="(src.Applications.Domains.Department)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
                 <line number="29" hits="2" branch="False" />
                 <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="False" />
                 <line number="33" hits="2" branch="False" />
                 <line number="34" hits="2" branch="False" />
-                <line number="35" hits="2" branch="False" />
+                <line number="35" hits="1" branch="False" />
                 <line number="36" hits="1" branch="False" />
                 <line number="37" hits="1" branch="False" />
                 <line number="38" hits="1" branch="False" />
                 <line number="39" hits="1" branch="False" />
-                <line number="40" hits="1" branch="False" />
-                <line number="42" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
               </lines>
             </method>
             <method name="FindAll" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="49" hits="2" branch="False" />
-                <line number="51" hits="2" branch="False" />
+                <line number="48" hits="3" branch="False" />
+                <line number="50" hits="3" branch="False" />
+                <line number="51" hits="3" branch="False" />
                 <line number="52" hits="2" branch="False" />
-                <line number="53" hits="2" branch="False" />
-                <line number="54" hits="12" branch="True" condition-coverage="100% (2/2)">
+                <line number="53" hits="12" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="71" type="jump" coverage="100%" />
                   </conditions>
                 </line>
+                <line number="54" hits="3" branch="False" />
                 <line number="55" hits="3" branch="False" />
                 <line number="56" hits="3" branch="False" />
-                <line number="57" hits="3" branch="False" />
-                <line number="58" hits="2" branch="True" condition-coverage="100% (2/2)">
+                <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="103" type="jump" coverage="100%" />
                   </conditions>
                 </line>
+                <line number="58" hits="1" branch="False" />
                 <line number="59" hits="1" branch="False" />
-                <line number="60" hits="1" branch="False" />
-                <line number="62" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="63" hits="3" branch="False" />
                 <line number="64" hits="1" branch="False" />
                 <line number="65" hits="1" branch="False" />
                 <line number="66" hits="1" branch="False" />
                 <line number="68" hits="1" branch="False" />
               </lines>
             </method>
-            <method name="FindById" signature="(System.Int32)" line-rate="0.6666" branch-rate="1" complexity="2">
+            <method name="FindById" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
                 <line number="76" hits="6" branch="False" />
                 <line number="78" hits="6" branch="False" />
                 <line number="79" hits="6" branch="False" />
-                <line number="80" hits="6" branch="True" condition-coverage="100% (2/2)">
+                <line number="80" hits="5" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="131" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="81" hits="2" branch="False" />
-                <line number="82" hits="2" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
                 <line number="84" hits="4" branch="False" />
-                <line number="86" hits="0" branch="False" />
-                <line number="87" hits="0" branch="False" />
-                <line number="88" hits="0" branch="False" />
-                <line number="89" hits="0" branch="False" />
-                <line number="91" hits="6" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
+                <line number="88" hits="1" branch="False" />
+                <line number="89" hits="1" branch="False" />
+                <line number="91" hits="5" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Infrastructures.Adapters.DepartmentEntityAdapter)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="11" branch="False" />
-                <line number="22" hits="11" branch="False" />
-                <line number="23" hits="11" branch="False" />
-                <line number="24" hits="11" branch="False" />
-                <line number="25" hits="11" branch="False" />
+                <line number="21" hits="14" branch="False" />
+                <line number="22" hits="14" branch="False" />
+                <line number="23" hits="14" branch="False" />
+                <line number="24" hits="14" branch="False" />
+                <line number="25" hits="14" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="29" hits="2" branch="False" />
             <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="False" />
             <line number="33" hits="2" branch="False" />
             <line number="34" hits="2" branch="False" />
-            <line number="35" hits="2" branch="False" />
+            <line number="35" hits="1" branch="False" />
             <line number="36" hits="1" branch="False" />
             <line number="37" hits="1" branch="False" />
             <line number="38" hits="1" branch="False" />
             <line number="39" hits="1" branch="False" />
-            <line number="40" hits="1" branch="False" />
-            <line number="42" hits="1" branch="False" />
-            <line number="49" hits="2" branch="False" />
-            <line number="51" hits="2" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="48" hits="3" branch="False" />
+            <line number="50" hits="3" branch="False" />
+            <line number="51" hits="3" branch="False" />
             <line number="52" hits="2" branch="False" />
-            <line number="53" hits="2" branch="False" />
-            <line number="54" hits="12" branch="True" condition-coverage="100% (2/2)">
+            <line number="53" hits="12" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="71" type="jump" coverage="100%" />
               </conditions>
             </line>
+            <line number="54" hits="3" branch="False" />
             <line number="55" hits="3" branch="False" />
             <line number="56" hits="3" branch="False" />
-            <line number="57" hits="3" branch="False" />
-            <line number="58" hits="2" branch="True" condition-coverage="100% (2/2)">
+            <line number="57" hits="2" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="103" type="jump" coverage="100%" />
               </conditions>
             </line>
+            <line number="58" hits="1" branch="False" />
             <line number="59" hits="1" branch="False" />
-            <line number="60" hits="1" branch="False" />
-            <line number="62" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="63" hits="3" branch="False" />
             <line number="64" hits="1" branch="False" />
             <line number="65" hits="1" branch="False" />
             <line number="66" hits="1" branch="False" />
@@ -1810,48 +1812,48 @@
             <line number="76" hits="6" branch="False" />
             <line number="78" hits="6" branch="False" />
             <line number="79" hits="6" branch="False" />
-            <line number="80" hits="6" branch="True" condition-coverage="100% (2/2)">
+            <line number="80" hits="5" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="131" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="81" hits="2" branch="False" />
-            <line number="82" hits="2" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
             <line number="84" hits="4" branch="False" />
-            <line number="86" hits="0" branch="False" />
-            <line number="87" hits="0" branch="False" />
-            <line number="88" hits="0" branch="False" />
-            <line number="89" hits="0" branch="False" />
-            <line number="91" hits="6" branch="False" />
-            <line number="21" hits="11" branch="False" />
-            <line number="22" hits="11" branch="False" />
-            <line number="23" hits="11" branch="False" />
-            <line number="24" hits="11" branch="False" />
-            <line number="25" hits="11" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
+            <line number="88" hits="1" branch="False" />
+            <line number="89" hits="1" branch="False" />
+            <line number="91" hits="5" branch="False" />
+            <line number="21" hits="14" branch="False" />
+            <line number="22" hits="14" branch="False" />
+            <line number="23" hits="14" branch="False" />
+            <line number="24" hits="14" branch="False" />
+            <line number="25" hits="14" branch="False" />
           </lines>
         </class>
         <class name="src.Infrastructures.Repositories.EmployeeRepository" filename="Infrastructures/Repositories/EmployeeRepository.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="Create" signature="(src.Applications.Domains.Employee)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="41" hits="3" branch="False" />
-                <line number="43" hits="3" branch="False" />
-                <line number="45" hits="3" branch="False" />
-                <line number="46" hits="3" branch="False" />
-                <line number="47" hits="3" branch="False" />
+                <line number="41" hits="4" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
                 <line number="48" hits="2" branch="False" />
-                <line number="49" hits="1" branch="False" />
-                <line number="50" hits="1" branch="False" />
-                <line number="51" hits="1" branch="False" />
-                <line number="52" hits="1" branch="False" />
+                <line number="49" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="2" branch="False" />
                 <line number="54" hits="2" branch="False" />
               </lines>
             </method>
             <method name="FindAll" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="61" hits="2" branch="False" />
-                <line number="63" hits="2" branch="False" />
-                <line number="65" hits="2" branch="False" />
+                <line number="61" hits="3" branch="False" />
+                <line number="63" hits="3" branch="False" />
+                <line number="65" hits="3" branch="False" />
                 <line number="66" hits="2" branch="False" />
                 <line number="67" hits="12" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
@@ -1872,33 +1874,36 @@
                 <line number="77" hits="1" branch="False" />
                 <line number="79" hits="3" branch="False" />
                 <line number="80" hits="1" branch="False" />
+                <line number="81" hits="1" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Infrastructures.Adapters.EmployeeEntityAdapter)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="30" hits="4" branch="False" />
-                <line number="31" hits="4" branch="False" />
-                <line number="32" hits="4" branch="False" />
-                <line number="33" hits="4" branch="False" />
-                <line number="34" hits="4" branch="False" />
+                <line number="30" hits="6" branch="False" />
+                <line number="31" hits="6" branch="False" />
+                <line number="32" hits="6" branch="False" />
+                <line number="33" hits="6" branch="False" />
+                <line number="34" hits="6" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="41" hits="3" branch="False" />
-            <line number="43" hits="3" branch="False" />
-            <line number="45" hits="3" branch="False" />
-            <line number="46" hits="3" branch="False" />
-            <line number="47" hits="3" branch="False" />
+            <line number="41" hits="4" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
             <line number="48" hits="2" branch="False" />
-            <line number="49" hits="1" branch="False" />
-            <line number="50" hits="1" branch="False" />
-            <line number="51" hits="1" branch="False" />
-            <line number="52" hits="1" branch="False" />
+            <line number="49" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="2" branch="False" />
             <line number="54" hits="2" branch="False" />
-            <line number="61" hits="2" branch="False" />
-            <line number="63" hits="2" branch="False" />
-            <line number="65" hits="2" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="63" hits="3" branch="False" />
+            <line number="65" hits="3" branch="False" />
             <line number="66" hits="2" branch="False" />
             <line number="67" hits="12" branch="True" condition-coverage="100% (2/2)">
               <conditions>
@@ -1919,20 +1924,23 @@
             <line number="77" hits="1" branch="False" />
             <line number="79" hits="3" branch="False" />
             <line number="80" hits="1" branch="False" />
-            <line number="30" hits="4" branch="False" />
-            <line number="31" hits="4" branch="False" />
-            <line number="32" hits="4" branch="False" />
-            <line number="33" hits="4" branch="False" />
-            <line number="34" hits="4" branch="False" />
+            <line number="81" hits="1" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="30" hits="6" branch="False" />
+            <line number="31" hits="6" branch="False" />
+            <line number="32" hits="6" branch="False" />
+            <line number="33" hits="6" branch="False" />
+            <line number="34" hits="6" branch="False" />
           </lines>
         </class>
-        <class name="src.Infrastructures.Repositories.EmpStatusRepository" filename="Infrastructures/Repositories/EmpStatusRepository.cs" line-rate="0.8709" branch-rate="1" complexity="7">
+        <class name="src.Infrastructures.Repositories.EmpStatusRepository" filename="Infrastructures/Repositories/EmpStatusRepository.cs" line-rate="1" branch-rate="1" complexity="7">
           <methods>
             <method name="FindAll" signature="()" line-rate="1" branch-rate="1" complexity="4">
               <lines>
-                <line number="32" hits="2" branch="False" />
-                <line number="35" hits="2" branch="False" />
-                <line number="36" hits="2" branch="False" />
+                <line number="32" hits="3" branch="False" />
+                <line number="35" hits="3" branch="False" />
+                <line number="36" hits="3" branch="False" />
                 <line number="38" hits="2" branch="False" />
                 <line number="40" hits="12" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
@@ -1952,42 +1960,45 @@
                 <line number="48" hits="1" branch="False" />
                 <line number="50" hits="3" branch="False" />
                 <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
               </lines>
             </method>
-            <method name="FindById" signature="(System.Int32)" line-rate="0.6666" branch-rate="1" complexity="2">
+            <method name="FindById" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="59" hits="6" branch="False" />
-                <line number="61" hits="6" branch="False" />
-                <line number="62" hits="6" branch="False" />
-                <line number="63" hits="6" branch="True" condition-coverage="100% (2/2)">
+                <line number="63" hits="6" branch="False" />
+                <line number="65" hits="6" branch="False" />
+                <line number="66" hits="6" branch="False" />
+                <line number="67" hits="5" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="131" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="64" hits="2" branch="False" />
-                <line number="65" hits="2" branch="False" />
-                <line number="67" hits="4" branch="False" />
-                <line number="69" hits="0" branch="False" />
-                <line number="70" hits="0" branch="False" />
-                <line number="71" hits="0" branch="False" />
-                <line number="72" hits="0" branch="False" />
-                <line number="74" hits="6" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="71" hits="4" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="1" branch="False" />
+                <line number="75" hits="1" branch="False" />
+                <line number="76" hits="1" branch="False" />
+                <line number="78" hits="5" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Infrastructures.Adapters.EmpStatusEntityAdapter)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="21" hits="9" branch="False" />
-                <line number="22" hits="9" branch="False" />
-                <line number="23" hits="9" branch="False" />
-                <line number="24" hits="9" branch="False" />
-                <line number="25" hits="9" branch="False" />
+                <line number="21" hits="12" branch="False" />
+                <line number="22" hits="12" branch="False" />
+                <line number="23" hits="12" branch="False" />
+                <line number="24" hits="12" branch="False" />
+                <line number="25" hits="12" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="32" hits="2" branch="False" />
-            <line number="35" hits="2" branch="False" />
-            <line number="36" hits="2" branch="False" />
+            <line number="32" hits="3" branch="False" />
+            <line number="35" hits="3" branch="False" />
+            <line number="36" hits="3" branch="False" />
             <line number="38" hits="2" branch="False" />
             <line number="40" hits="12" branch="True" condition-coverage="100% (2/2)">
               <conditions>
@@ -2007,27 +2018,30 @@
             <line number="48" hits="1" branch="False" />
             <line number="50" hits="3" branch="False" />
             <line number="51" hits="1" branch="False" />
-            <line number="59" hits="6" branch="False" />
-            <line number="61" hits="6" branch="False" />
-            <line number="62" hits="6" branch="False" />
-            <line number="63" hits="6" branch="True" condition-coverage="100% (2/2)">
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="63" hits="6" branch="False" />
+            <line number="65" hits="6" branch="False" />
+            <line number="66" hits="6" branch="False" />
+            <line number="67" hits="5" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="131" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="64" hits="2" branch="False" />
-            <line number="65" hits="2" branch="False" />
-            <line number="67" hits="4" branch="False" />
-            <line number="69" hits="0" branch="False" />
-            <line number="70" hits="0" branch="False" />
-            <line number="71" hits="0" branch="False" />
-            <line number="72" hits="0" branch="False" />
-            <line number="74" hits="6" branch="False" />
-            <line number="21" hits="9" branch="False" />
-            <line number="22" hits="9" branch="False" />
-            <line number="23" hits="9" branch="False" />
-            <line number="24" hits="9" branch="False" />
-            <line number="25" hits="9" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="71" hits="4" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="1" branch="False" />
+            <line number="75" hits="1" branch="False" />
+            <line number="76" hits="1" branch="False" />
+            <line number="78" hits="5" branch="False" />
+            <line number="21" hits="12" branch="False" />
+            <line number="22" hits="12" branch="False" />
+            <line number="23" hits="12" branch="False" />
+            <line number="24" hits="12" branch="False" />
+            <line number="25" hits="12" branch="False" />
           </lines>
         </class>
         <class name="src.Infrastructures.Entities.DepartmentEntity" filename="Infrastructures/Entities/DepartmentEntity.cs" line-rate="1" branch-rate="1" complexity="2">
@@ -2057,17 +2071,17 @@
             </method>
             <method name="get_EmpName" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="22" hits="13" branch="False" />
+                <line number="22" hits="15" branch="False" />
               </lines>
             </method>
             <method name="get_EmpEmail" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="26" hits="12" branch="False" />
+                <line number="26" hits="14" branch="False" />
               </lines>
             </method>
             <method name="get_EmpStatusId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="31" hits="9" branch="False" />
+                <line number="31" hits="10" branch="False" />
               </lines>
             </method>
             <method name="get_EmpStatusEntity" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -2077,7 +2091,7 @@
             </method>
             <method name="get_DepId" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="42" hits="9" branch="False" />
+                <line number="42" hits="10" branch="False" />
               </lines>
             </method>
             <method name="get_DepartmentEntity" signature="()" line-rate="0" branch-rate="1" complexity="1">
@@ -2088,11 +2102,11 @@
           </methods>
           <lines>
             <line number="16" hits="3" branch="False" />
-            <line number="22" hits="13" branch="False" />
-            <line number="26" hits="12" branch="False" />
-            <line number="31" hits="9" branch="False" />
+            <line number="22" hits="15" branch="False" />
+            <line number="26" hits="14" branch="False" />
+            <line number="31" hits="10" branch="False" />
             <line number="34" hits="0" branch="False" />
-            <line number="42" hits="9" branch="False" />
+            <line number="42" hits="10" branch="False" />
             <line number="45" hits="0" branch="False" />
           </lines>
         </class>
@@ -2118,17 +2132,17 @@
           <methods>
             <method name="get_Employees" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="22" branch="False" />
+                <line number="8" hits="28" branch="False" />
               </lines>
             </method>
             <method name="get_Departments" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="27" branch="False" />
+                <line number="9" hits="32" branch="False" />
               </lines>
             </method>
             <method name="get_EmpStatuses" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="24" branch="False" />
+                <line number="11" hits="29" branch="False" />
               </lines>
             </method>
             <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
@@ -2139,17 +2153,17 @@
             </method>
             <method name=".ctor" signature="(Microsoft.EntityFrameworkCore.DbContextOptions`1&lt;src.Infrastructures.Context.AppDbContext&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="17" hits="48" branch="False" />
+                <line number="17" hits="60" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="8" hits="22" branch="False" />
-            <line number="9" hits="27" branch="False" />
-            <line number="11" hits="24" branch="False" />
+            <line number="8" hits="28" branch="False" />
+            <line number="9" hits="32" branch="False" />
+            <line number="11" hits="29" branch="False" />
             <line number="23" hits="1" branch="False" />
             <line number="51" hits="1" branch="False" />
-            <line number="17" hits="48" branch="False" />
+            <line number="17" hits="60" branch="False" />
           </lines>
         </class>
         <class name="src.Infrastructures.Adapters.DepartmentEntityAdapter" filename="Infrastructures/Adapters/DepartmentEntityAdaptor.cs" line-rate="0.7857" branch-rate="0.5" complexity="3">
@@ -2206,21 +2220,21 @@
           <methods>
             <method name="Convert" signature="(src.Applications.Domains.Employee)" line-rate="0.875" branch-rate="0.875" complexity="8">
               <lines>
-                <line number="30" hits="3" branch="False" />
-                <line number="31" hits="3" branch="False" />
-                <line number="32" hits="3" branch="False" />
-                <line number="33" hits="3" branch="False" />
-                <line number="34" hits="3" branch="False" />
-                <line number="35" hits="3" branch="False" />
-                <line number="36" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="4" branch="False" />
+                <line number="34" hits="4" branch="False" />
+                <line number="35" hits="4" branch="False" />
+                <line number="36" hits="4" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="31" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="37" hits="3" branch="False" />
-                <line number="38" hits="3" branch="False" />
-                <line number="39" hits="3" branch="False" />
-                <line number="40" hits="3" branch="True" condition-coverage="50% (1/2)">
+                <line number="37" hits="4" branch="False" />
+                <line number="38" hits="4" branch="False" />
+                <line number="39" hits="4" branch="False" />
+                <line number="40" hits="4" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="64" type="jump" coverage="50%" />
                   </conditions>
@@ -2228,24 +2242,24 @@
                 <line number="41" hits="0" branch="False" />
                 <line number="42" hits="0" branch="False" />
                 <line number="43" hits="0" branch="False" />
-                <line number="44" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="44" hits="4" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="102" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="45" hits="3" branch="False" />
-                <line number="46" hits="3" branch="False" />
-                <line number="47" hits="3" branch="False" />
-                <line number="48" hits="3" branch="True" condition-coverage="100% (2/2)">
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
+                <line number="48" hits="4" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="137" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="49" hits="3" branch="False" />
-                <line number="50" hits="3" branch="False" />
-                <line number="51" hits="3" branch="False" />
-                <line number="52" hits="3" branch="False" />
-                <line number="53" hits="3" branch="False" />
+                <line number="49" hits="4" branch="False" />
+                <line number="50" hits="4" branch="False" />
+                <line number="51" hits="4" branch="False" />
+                <line number="52" hits="4" branch="False" />
+                <line number="53" hits="4" branch="False" />
               </lines>
             </method>
             <method name="Restore" signature="(src.Infrastructures.Entities.EmployeeEntity)" line-rate="0.75" branch-rate="0.5" complexity="4">
@@ -2286,30 +2300,30 @@
             </method>
             <method name=".ctor" signature="(src.Applications.Repositories.IDepartmentRepository,src.Applications.Repositories.IEmpStatusRepository)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="4" branch="False" />
-                <line number="19" hits="4" branch="False" />
-                <line number="20" hits="4" branch="False" />
-                <line number="21" hits="4" branch="False" />
-                <line number="22" hits="4" branch="False" />
+                <line number="18" hits="6" branch="False" />
+                <line number="19" hits="6" branch="False" />
+                <line number="20" hits="6" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="6" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="30" hits="3" branch="False" />
-            <line number="31" hits="3" branch="False" />
-            <line number="32" hits="3" branch="False" />
-            <line number="33" hits="3" branch="False" />
-            <line number="34" hits="3" branch="False" />
-            <line number="35" hits="3" branch="False" />
-            <line number="36" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="4" branch="False" />
+            <line number="34" hits="4" branch="False" />
+            <line number="35" hits="4" branch="False" />
+            <line number="36" hits="4" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="31" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="37" hits="3" branch="False" />
-            <line number="38" hits="3" branch="False" />
-            <line number="39" hits="3" branch="False" />
-            <line number="40" hits="3" branch="True" condition-coverage="50% (1/2)">
+            <line number="37" hits="4" branch="False" />
+            <line number="38" hits="4" branch="False" />
+            <line number="39" hits="4" branch="False" />
+            <line number="40" hits="4" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="64" type="jump" coverage="50%" />
               </conditions>
@@ -2317,24 +2331,24 @@
             <line number="41" hits="0" branch="False" />
             <line number="42" hits="0" branch="False" />
             <line number="43" hits="0" branch="False" />
-            <line number="44" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="44" hits="4" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="102" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="45" hits="3" branch="False" />
-            <line number="46" hits="3" branch="False" />
-            <line number="47" hits="3" branch="False" />
-            <line number="48" hits="3" branch="True" condition-coverage="100% (2/2)">
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
+            <line number="48" hits="4" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="137" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="49" hits="3" branch="False" />
-            <line number="50" hits="3" branch="False" />
-            <line number="51" hits="3" branch="False" />
-            <line number="52" hits="3" branch="False" />
-            <line number="53" hits="3" branch="False" />
+            <line number="49" hits="4" branch="False" />
+            <line number="50" hits="4" branch="False" />
+            <line number="51" hits="4" branch="False" />
+            <line number="52" hits="4" branch="False" />
+            <line number="53" hits="4" branch="False" />
             <line number="61" hits="3" branch="False" />
             <line number="64" hits="3" branch="True" condition-coverage="50% (1/2)">
               <conditions>
@@ -2367,11 +2381,11 @@
             <line number="86" hits="3" branch="False" />
             <line number="87" hits="3" branch="False" />
             <line number="88" hits="3" branch="False" />
-            <line number="18" hits="4" branch="False" />
-            <line number="19" hits="4" branch="False" />
-            <line number="20" hits="4" branch="False" />
-            <line number="21" hits="4" branch="False" />
-            <line number="22" hits="4" branch="False" />
+            <line number="18" hits="6" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="20" hits="6" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="6" branch="False" />
           </lines>
         </class>
         <class name="src.Infrastructures.Adapters.EmpStatusEntityAdapter" filename="Infrastructures/Adapters/EmpStatusAdaptor.cs" line-rate="0.2857" branch-rate="0" complexity="3">
@@ -2469,13 +2483,13 @@
             </method>
             <method name=".ctor" signature="(System.String,System.Exception)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="6" branch="False" />
+                <line number="11" hits="24" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
             <line number="9" hits="9" branch="False" />
-            <line number="11" hits="6" branch="False" />
+            <line number="11" hits="24" branch="False" />
           </lines>
         </class>
         <class name="src.Exceptions.NotFoundException" filename="Exceptions/NotFoundException.cs" line-rate="0" branch-rate="1" complexity="2">
@@ -2598,46 +2612,38 @@
             <line number="31" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="src.Applications.Services.Impls.EmployeeShowListService" filename="Applications/Services/Impls/DepartmentShowListService.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="src.Applications.Services.Impls.DepartmentShowListService" filename="Applications/Services/Impls/DepartmentShowListService.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
-            <method name="GetEmployees" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetDepartments" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
-              </lines>
-            </method>
-            <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Applications.Repositories.IEmployeeRepository,src.Applications.Repositories.IDepartmentRepository,src.Applications.Repositories.IEmpStatusRepository)" line-rate="0" branch-rate="1" complexity="1">
-              <lines>
-                <line number="34" hits="0" branch="False" />
-                <line number="35" hits="0" branch="False" />
-                <line number="36" hits="0" branch="False" />
-                <line number="37" hits="0" branch="False" />
                 <line number="38" hits="0" branch="False" />
                 <line number="39" hits="0" branch="False" />
                 <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="43" hits="0" branch="False" />
-                <line number="44" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Applications.Repositories.IDepartmentRepository)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="0" branch="False" />
+                <line number="30" hits="0" branch="False" />
+                <line number="31" hits="0" branch="False" />
+                <line number="32" hits="0" branch="False" />
+                <line number="33" hits="0" branch="False" />
+                <line number="34" hits="0" branch="False" />
+                <line number="35" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
-            <line number="34" hits="0" branch="False" />
-            <line number="35" hits="0" branch="False" />
-            <line number="36" hits="0" branch="False" />
-            <line number="37" hits="0" branch="False" />
             <line number="38" hits="0" branch="False" />
             <line number="39" hits="0" branch="False" />
             <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="43" hits="0" branch="False" />
-            <line number="44" hits="0" branch="False" />
+            <line number="29" hits="0" branch="False" />
+            <line number="30" hits="0" branch="False" />
+            <line number="31" hits="0" branch="False" />
+            <line number="32" hits="0" branch="False" />
+            <line number="33" hits="0" branch="False" />
+            <line number="34" hits="0" branch="False" />
+            <line number="35" hits="0" branch="False" />
           </lines>
         </class>
         <class name="src.Applications.Services.Impls.EmployeeRegisterService" filename="Applications/Services/Impls/EmployeeRegisterService.cs" line-rate="0" branch-rate="0" complexity="9">
@@ -2784,85 +2790,93 @@
             <line number="43" hits="0" branch="False" />
           </lines>
         </class>
-        <class name="src.Applications.Services.Impls.DepartmentShowListService" filename="Applications/Services/Impls/EmployeeShowListService.cs" line-rate="0" branch-rate="1" complexity="2">
+        <class name="src.Applications.Services.Impls.EmployeeShowListService" filename="Applications/Services/Impls/EmployeeShowListService.cs" line-rate="0" branch-rate="1" complexity="2">
           <methods>
-            <method name="GetDepartments" signature="()" line-rate="0" branch-rate="1" complexity="1">
+            <method name="GetEmployees" signature="()" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="39" hits="0" branch="False" />
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
+                <line number="46" hits="0" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
               </lines>
             </method>
-            <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Applications.Repositories.IDepartmentRepository)" line-rate="0" branch-rate="1" complexity="1">
+            <method name=".ctor" signature="(src.Infrastructures.Context.AppDbContext,src.Applications.Repositories.IEmployeeRepository,src.Applications.Repositories.IDepartmentRepository,src.Applications.Repositories.IEmpStatusRepository)" line-rate="0" branch-rate="1" complexity="1">
               <lines>
-                <line number="30" hits="0" branch="False" />
-                <line number="31" hits="0" branch="False" />
-                <line number="32" hits="0" branch="False" />
                 <line number="33" hits="0" branch="False" />
                 <line number="34" hits="0" branch="False" />
                 <line number="35" hits="0" branch="False" />
                 <line number="36" hits="0" branch="False" />
+                <line number="37" hits="0" branch="False" />
+                <line number="38" hits="0" branch="False" />
+                <line number="39" hits="0" branch="False" />
+                <line number="40" hits="0" branch="False" />
+                <line number="41" hits="0" branch="False" />
+                <line number="42" hits="0" branch="False" />
+                <line number="43" hits="0" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="39" hits="0" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="30" hits="0" branch="False" />
-            <line number="31" hits="0" branch="False" />
-            <line number="32" hits="0" branch="False" />
+            <line number="46" hits="0" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
             <line number="33" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />
             <line number="35" hits="0" branch="False" />
             <line number="36" hits="0" branch="False" />
+            <line number="37" hits="0" branch="False" />
+            <line number="38" hits="0" branch="False" />
+            <line number="39" hits="0" branch="False" />
+            <line number="40" hits="0" branch="False" />
+            <line number="41" hits="0" branch="False" />
+            <line number="42" hits="0" branch="False" />
+            <line number="43" hits="0" branch="False" />
           </lines>
         </class>
         <class name="src.Applications.Domains.Department" filename="Applications/Domains/Department.cs" line-rate="0.909" branch-rate="0.6666" complexity="10">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="23" branch="False" />
+                <line number="8" hits="25" branch="False" />
               </lines>
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="45" branch="False" />
+                <line number="9" hits="47" branch="False" />
               </lines>
             </method>
             <method name="validateDepartmentName" signature="(System.String)" line-rate="0.7777" branch-rate="0.6666" complexity="6">
               <lines>
-                <line number="39" hits="13" branch="False" />
-                <line number="40" hits="13" branch="True" condition-coverage="100% (2/2)">
+                <line number="39" hits="14" branch="False" />
+                <line number="40" hits="14" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="7" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="41" hits="13" branch="False" />
-                <line number="43" hits="13" branch="True" condition-coverage="50% (1/2)">
+                <line number="41" hits="14" branch="False" />
+                <line number="43" hits="14" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="18" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="44" hits="0" branch="False" />
-                <line number="45" hits="13" branch="True" condition-coverage="50% (1/2)">
+                <line number="45" hits="14" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="43" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="46" hits="0" branch="False" />
-                <line number="47" hits="13" branch="False" />
-                <line number="48" hits="13" branch="False" />
+                <line number="47" hits="14" branch="False" />
+                <line number="48" hits="14" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="13" branch="False" />
-                <line number="17" hits="13" branch="False" />
-                <line number="19" hits="13" branch="False" />
-                <line number="20" hits="13" branch="False" />
-                <line number="21" hits="13" branch="False" />
-                <line number="22" hits="13" branch="False" />
+                <line number="16" hits="14" branch="False" />
+                <line number="17" hits="14" branch="False" />
+                <line number="19" hits="14" branch="False" />
+                <line number="20" hits="14" branch="False" />
+                <line number="21" hits="14" branch="False" />
+                <line number="22" hits="14" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
@@ -2876,35 +2890,35 @@
             </method>
           </methods>
           <lines>
-            <line number="8" hits="23" branch="False" />
-            <line number="9" hits="45" branch="False" />
-            <line number="39" hits="13" branch="False" />
-            <line number="40" hits="13" branch="True" condition-coverage="100% (2/2)">
+            <line number="8" hits="25" branch="False" />
+            <line number="9" hits="47" branch="False" />
+            <line number="39" hits="14" branch="False" />
+            <line number="40" hits="14" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="7" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="41" hits="13" branch="False" />
-            <line number="43" hits="13" branch="True" condition-coverage="50% (1/2)">
+            <line number="41" hits="14" branch="False" />
+            <line number="43" hits="14" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="18" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="44" hits="0" branch="False" />
-            <line number="45" hits="13" branch="True" condition-coverage="50% (1/2)">
+            <line number="45" hits="14" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="43" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="46" hits="0" branch="False" />
-            <line number="47" hits="13" branch="False" />
-            <line number="48" hits="13" branch="False" />
-            <line number="16" hits="13" branch="False" />
-            <line number="17" hits="13" branch="False" />
-            <line number="19" hits="13" branch="False" />
-            <line number="20" hits="13" branch="False" />
-            <line number="21" hits="13" branch="False" />
-            <line number="22" hits="13" branch="False" />
+            <line number="47" hits="14" branch="False" />
+            <line number="48" hits="14" branch="False" />
+            <line number="16" hits="14" branch="False" />
+            <line number="17" hits="14" branch="False" />
+            <line number="19" hits="14" branch="False" />
+            <line number="20" hits="14" branch="False" />
+            <line number="21" hits="14" branch="False" />
+            <line number="22" hits="14" branch="False" />
             <line number="27" hits="5" branch="False" />
             <line number="28" hits="5" branch="False" />
             <line number="29" hits="5" branch="False" />
@@ -2916,45 +2930,45 @@
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="12" branch="False" />
+                <line number="8" hits="14" branch="False" />
               </lines>
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="18" branch="False" />
+                <line number="9" hits="20" branch="False" />
               </lines>
             </method>
             <method name="get_Email" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="15" branch="False" />
+                <line number="10" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_EmpStatus" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="11" hits="15" branch="False" />
+                <line number="11" hits="18" branch="False" />
               </lines>
             </method>
             <method name="get_Department" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="12" hits="15" branch="False" />
+                <line number="12" hits="18" branch="False" />
               </lines>
             </method>
             <method name="ValidateName" signature="(System.String)" line-rate="0.6666" branch-rate="0.5" complexity="4">
               <lines>
-                <line number="46" hits="9" branch="False" />
-                <line number="47" hits="9" branch="True" condition-coverage="50% (1/2)">
+                <line number="46" hits="10" branch="False" />
+                <line number="47" hits="10" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="9" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="48" hits="0" branch="False" />
-                <line number="49" hits="9" branch="True" condition-coverage="50% (1/2)">
+                <line number="49" hits="10" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="34" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="50" hits="0" branch="False" />
-                <line number="51" hits="9" branch="False" />
+                <line number="51" hits="10" branch="False" />
               </lines>
             </method>
             <method name="ValidateEmail" signature="(System.String)" line-rate="0" branch-rate="0" complexity="4">
@@ -2979,43 +2993,43 @@
             </method>
             <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String,System.String,src.Applications.Domains.EmpStatus,src.Applications.Domains.Department)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="24" hits="9" branch="False" />
-                <line number="25" hits="9" branch="False" />
-                <line number="26" hits="9" branch="False" />
-                <line number="27" hits="9" branch="False" />
-                <line number="28" hits="9" branch="False" />
-                <line number="29" hits="9" branch="False" />
-                <line number="30" hits="9" branch="False" />
-                <line number="31" hits="9" branch="False" />
-                <line number="32" hits="9" branch="False" />
+                <line number="24" hits="10" branch="False" />
+                <line number="25" hits="10" branch="False" />
+                <line number="26" hits="10" branch="False" />
+                <line number="27" hits="10" branch="False" />
+                <line number="28" hits="10" branch="False" />
+                <line number="29" hits="10" branch="False" />
+                <line number="30" hits="10" branch="False" />
+                <line number="31" hits="10" branch="False" />
+                <line number="32" hits="10" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String,System.String,src.Applications.Domains.EmpStatus,src.Applications.Domains.Department)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="40" hits="18" branch="False" />
+                <line number="40" hits="21" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="8" hits="12" branch="False" />
-            <line number="9" hits="18" branch="False" />
-            <line number="10" hits="15" branch="False" />
-            <line number="11" hits="15" branch="False" />
-            <line number="12" hits="15" branch="False" />
-            <line number="46" hits="9" branch="False" />
-            <line number="47" hits="9" branch="True" condition-coverage="50% (1/2)">
+            <line number="8" hits="14" branch="False" />
+            <line number="9" hits="20" branch="False" />
+            <line number="10" hits="18" branch="False" />
+            <line number="11" hits="18" branch="False" />
+            <line number="12" hits="18" branch="False" />
+            <line number="46" hits="10" branch="False" />
+            <line number="47" hits="10" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="9" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="48" hits="0" branch="False" />
-            <line number="49" hits="9" branch="True" condition-coverage="50% (1/2)">
+            <line number="49" hits="10" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="34" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="50" hits="0" branch="False" />
-            <line number="51" hits="9" branch="False" />
+            <line number="51" hits="10" branch="False" />
             <line number="53" hits="0" branch="False" />
             <line number="54" hits="0" branch="True" condition-coverage="0% (0/2)">
               <conditions>
@@ -3032,57 +3046,57 @@
             <line number="59" hits="0" branch="False" />
             <line number="60" hits="0" branch="False" />
             <line number="62" hits="0" branch="False" />
-            <line number="24" hits="9" branch="False" />
-            <line number="25" hits="9" branch="False" />
-            <line number="26" hits="9" branch="False" />
-            <line number="27" hits="9" branch="False" />
-            <line number="28" hits="9" branch="False" />
-            <line number="29" hits="9" branch="False" />
-            <line number="30" hits="9" branch="False" />
-            <line number="31" hits="9" branch="False" />
-            <line number="32" hits="9" branch="False" />
-            <line number="40" hits="18" branch="False" />
+            <line number="24" hits="10" branch="False" />
+            <line number="25" hits="10" branch="False" />
+            <line number="26" hits="10" branch="False" />
+            <line number="27" hits="10" branch="False" />
+            <line number="28" hits="10" branch="False" />
+            <line number="29" hits="10" branch="False" />
+            <line number="30" hits="10" branch="False" />
+            <line number="31" hits="10" branch="False" />
+            <line number="32" hits="10" branch="False" />
+            <line number="40" hits="21" branch="False" />
           </lines>
         </class>
         <class name="src.Applications.Domains.EmpStatus" filename="Applications/Domains/EmpStatus.cs" line-rate="0.75" branch-rate="0.75" complexity="9">
           <methods>
             <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="35" branch="False" />
+                <line number="8" hits="38" branch="False" />
               </lines>
             </method>
             <method name="get_Name" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="9" hits="39" branch="False" />
+                <line number="9" hits="41" branch="False" />
               </lines>
             </method>
             <method name="validateEmpStatusName" signature="(System.String)" line-rate="0.8571" branch-rate="0.75" complexity="4">
               <lines>
-                <line number="43" hits="16" branch="False" />
-                <line number="44" hits="16" branch="True" condition-coverage="100% (2/2)">
+                <line number="43" hits="17" branch="False" />
+                <line number="44" hits="17" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="7" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="45" hits="16" branch="False" />
-                <line number="46" hits="16" branch="True" condition-coverage="50% (1/2)">
+                <line number="45" hits="17" branch="False" />
+                <line number="46" hits="17" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="22" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="47" hits="0" branch="False" />
-                <line number="48" hits="16" branch="False" />
-                <line number="49" hits="16" branch="False" />
+                <line number="48" hits="17" branch="False" />
+                <line number="49" hits="17" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Nullable`1&lt;System.Int32&gt;,System.String)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="16" hits="16" branch="False" />
-                <line number="17" hits="16" branch="False" />
-                <line number="19" hits="16" branch="False" />
-                <line number="20" hits="16" branch="False" />
-                <line number="21" hits="16" branch="False" />
-                <line number="22" hits="16" branch="False" />
+                <line number="16" hits="17" branch="False" />
+                <line number="17" hits="17" branch="False" />
+                <line number="19" hits="17" branch="False" />
+                <line number="20" hits="17" branch="False" />
+                <line number="21" hits="17" branch="False" />
+                <line number="22" hits="17" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
@@ -3100,29 +3114,29 @@
             </method>
           </methods>
           <lines>
-            <line number="8" hits="35" branch="False" />
-            <line number="9" hits="39" branch="False" />
-            <line number="43" hits="16" branch="False" />
-            <line number="44" hits="16" branch="True" condition-coverage="100% (2/2)">
+            <line number="8" hits="38" branch="False" />
+            <line number="9" hits="41" branch="False" />
+            <line number="43" hits="17" branch="False" />
+            <line number="44" hits="17" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="7" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="45" hits="16" branch="False" />
-            <line number="46" hits="16" branch="True" condition-coverage="50% (1/2)">
+            <line number="45" hits="17" branch="False" />
+            <line number="46" hits="17" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="22" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="47" hits="0" branch="False" />
-            <line number="48" hits="16" branch="False" />
-            <line number="49" hits="16" branch="False" />
-            <line number="16" hits="16" branch="False" />
-            <line number="17" hits="16" branch="False" />
-            <line number="19" hits="16" branch="False" />
-            <line number="20" hits="16" branch="False" />
-            <line number="21" hits="16" branch="False" />
-            <line number="22" hits="16" branch="False" />
+            <line number="48" hits="17" branch="False" />
+            <line number="49" hits="17" branch="False" />
+            <line number="16" hits="17" branch="False" />
+            <line number="17" hits="17" branch="False" />
+            <line number="19" hits="17" branch="False" />
+            <line number="20" hits="17" branch="False" />
+            <line number="21" hits="17" branch="False" />
+            <line number="22" hits="17" branch="False" />
             <line number="27" hits="9" branch="False" />
             <line number="33" hits="0" branch="False" />
             <line number="34" hits="0" branch="False" />

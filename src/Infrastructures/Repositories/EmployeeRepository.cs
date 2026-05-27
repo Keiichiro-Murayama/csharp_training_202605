@@ -79,7 +79,7 @@ public class EmployeeRepository : IEmployeeRepository
         catch(InternalException){throw;}
         catch (Exception e)
         {
-            throw new InternalException("すべての部署を取得できませんでした。", e);
+            throw new InternalException("すべての従業員を取得できませんでした。", e);
         }
 
 

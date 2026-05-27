@@ -60,9 +60,10 @@ public class DepartmentRepository : IDepartmentRepository
             }
             return results;
         }
-        catch (InternalException)
+        catch (InternalException){throw;}
+        catch (Exception e)
         {
-            throw;
+            throw new InternalException("すべての部署を取得できませんでした。", e);
         }
     }
 

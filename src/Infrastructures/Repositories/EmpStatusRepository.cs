@@ -48,6 +48,10 @@ public class EmpStatusRepository : IEmpStatusRepository
             return results;
         }
         catch(InternalException){throw;}
+        catch(Exception e)
+        {
+            throw new InternalException("すべての雇用形態を取得できませんでした。",e);
+        }
     }
 
     /// <summary>

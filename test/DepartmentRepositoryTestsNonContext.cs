@@ -13,40 +13,52 @@ namespace test;
 
 [DoNotParallelize]
 [TestClass]
-public class EmpStatusRepositoryTestsNullTable
+public class DepartmentRepositoryTestsNonContext
 {
     private const string ConnectionString =
     "Host=localhost;Port=5432;Database=csharp_training_202605;Username=postgres;Password=training;";
 
-    private EmpStatusRepository _repository = null!;
+    private DepartmentRepository _repository = null!;
     private AppDbContext _context = null!;
 
     [TestInitialize]
     public void Setup()
     {
-        var empStatusAdapter = new EmpStatusEntityAdapter();
+        var departmentAdapter = new DepartmentEntityAdapter();
         var options = new DbContextOptionsBuilder<AppDbContext>()
-            .UseNpgsql(ConnectionString)
+            .UseNpgsql()
             .Options;
 
         _context = new AppDbContext(options);
 
-        var path = Path.Combine(AppContext.BaseDirectory, "sql", "init_null.sql");
+        var path = Path.Combine(AppContext.BaseDirectory, "sql", "init.sql");
         var sql = File.ReadAllText(path);
-        _context.Database.ExecuteSqlRaw(sql);
+        // _context.Database.ExecuteSqlRaw(sql);
 
-        _repository = new EmpStatusRepository(_context, empStatusAdapter);
+        _repository = new DepartmentRepository(_context, departmentAdapter);
     }
-
-    
     [TestMethod]
-    public void FindAll_NonHit()
+    public void FindAll_NonContext()
     {
+
         var ex = Assert.ThrowsException<InternalException>(() =>
         {
             _repository.FindAll();
         }
         );
-        Assert.AreEqual("登録された雇用形態はありません。", ex.Message);
+        Assert.AreEqual("すべての部署を取得できませんでした。", ex.Message);
+    }
+        [TestMethod]
+    public void FindById_NonContext()
+    {
+        int searchId = 1; 
+        var ex = Assert.ThrowsException<InternalException>(() =>
+        {
+            _repository.FindById(searchId);
+        }
+        );
+        Assert.AreEqual("指定された部署Idの部署を取得できませんでした。", ex.Message);
     }
 }
+
+
