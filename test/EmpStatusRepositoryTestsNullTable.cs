@@ -40,34 +40,20 @@ public class EmpStatusRepositoryTestsNullTable
 
     
     [TestMethod]
-    public void FindAll_Success()
+    public void FindAll_NonHit()
     {
-        List<EmpStatus> empStatusList = _repository.FindAll();
-
-        var empStatus1 = new EmpStatus("正社員");
-        var empStatus2 = new EmpStatus("契約社員");
-        var empStatus3 = new EmpStatus("アルバイト");
-
-
-        List<EmpStatus> expected = new List<EmpStatus>{empStatus1, empStatus2, empStatus3};
-
-        Assert.AreEqual(empStatus1.Name, empStatusList[0].Name);
-        Assert.AreEqual(empStatus2.Name, empStatusList[1].Name);
-        Assert.AreEqual(empStatus3.Name, empStatusList[2].Name);
+        var ex = Assert.ThrowsException<InternalException>(() =>
+        {
+            _repository.FindAll();
+        }
+        );
+        Assert.AreEqual("登録された雇用形態はありません。", ex.Message);
     }
 
     [TestMethod]
-    public void FindById_Success()
+    public void FindById_NonHit()
     {
-        int searchId = 1; 
-        EmpStatus searched = _repository.FindById(searchId)!;
-        Assert.AreEqual("正社員", searched.Name);
-    }
-
-    [TestMethod]
-    public void FindById_ReturnNull()
-    {
-        int searchId = 10; 
+        int searchId = 10;
         EmpStatus? searched = _repository.FindById(searchId);
         Assert.AreEqual(null, searched?.Name);
     }

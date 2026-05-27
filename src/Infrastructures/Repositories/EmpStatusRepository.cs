@@ -17,7 +17,7 @@ public class EmpStatusRepository : IEmpStatusRepository
     /// ドメインモデル:部署と部署エンティティの相互変換インターフェイスの実装
     /// </summary>
     private readonly EmpStatusEntityAdapter _adapter;
-    
+
     public EmpStatusRepository(AppDbContext context, EmpStatusEntityAdapter adapter)
     {
         _context = context;
@@ -40,14 +40,19 @@ public class EmpStatusRepository : IEmpStatusRepository
             foreach (var entity in entities)
             {
                 results.Add(_adapter.Restore(entity));
-            }   
+            }
+            if (results.Count == 0)
+            {
+                throw new InternalException("登録された雇用形態はありません。");
+            }
             return results;
         }
+        catch(InternalException){throw;}
         catch (Exception e)
-        {   
+        {
 
             throw new InternalException(
-                "すべての部署を取得できませんでした。", e);
+                "すべての雇用形態を取得できませんでした。", e);
         }
     }
 
