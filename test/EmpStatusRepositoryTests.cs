@@ -38,7 +38,7 @@ public class EmpStatusRepositoryTests
         _repository = new EmpStatusRepository(_context, empStatusAdapter);
     }
 
-    
+
     [TestMethod]
     public void FindAll_Success()
     {
