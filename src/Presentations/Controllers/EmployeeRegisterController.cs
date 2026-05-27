@@ -96,6 +96,7 @@ public class EmployeeRegisterController : Controller
         else
         {
             viewModel.DepName = string.Empty;
+            viewModel.Warnings.Add("所属部署が選択されていません。");
         }
 
         // 選択された雇用形態のIdで雇用形態データを取得する
@@ -109,6 +110,7 @@ public class EmployeeRegisterController : Controller
         else
         {
             viewModel.EmpStatusName = string.Empty;
+            viewModel.Warnings.Add("雇用形態が選択されていません。");
         }
 
         // 確認画面を表示する
@@ -195,7 +197,6 @@ public class EmployeeRegisterController : Controller
     /// </summary>
     private void PopulateEmpStatus(EmployeeRegisterViewModel viewModel)
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< StartPopulateEmpStatus >>>>>>>>>>>>>>>>>>>>>>");
         // 従業員登録サービスから部署一覧を取得する
         var empstatus = _employeeRegisterService.GetEmpStatuses();
         // 部署一覧をEmployeeRegisterViewModelに登録する

@@ -78,7 +78,6 @@ public class EmployeeRegisterViewModel
     /// <param name="empStatuses"></param>
     public void SetEmpStatuses(List<EmpStatus> empStatuses)
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< Start SetEmpStatuses >>>>>>>>>>>>>>>>>>>>>>");
 
         // SelectListItemのリストを作成
         var selectItems = new List<SelectListItem>();
@@ -86,8 +85,6 @@ public class EmployeeRegisterViewModel
         {
             if (empStatus.Id.HasValue)
             {
-                System.Console.WriteLine("<<<<<<<<<<<<<<<<<< EmpSTATUS HAS VALUE >>>>>>>>>>>>>>>>>>>>>>");
-
                 var item = new SelectListItem();
                 item.Value = empStatus.Id.Value.ToString();
                 item.Text = string.IsNullOrEmpty(empStatus.Name) ? "(名称未設定)" : empStatus.Name;
@@ -101,4 +98,8 @@ public class EmployeeRegisterViewModel
     public List<SelectListItem>? Departments { get; set; } = null;
     public List<SelectListItem>? EmpStatuses { get; set; } = null;
 
+    /// <summary>
+    /// 確認画面用の警告メッセージリスト
+    /// </summary>
+    public List<string> Warnings { get; set; } = new List<string>();
 }

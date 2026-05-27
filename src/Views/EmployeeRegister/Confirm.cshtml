@@ -31,6 +31,18 @@
                     </tr>
                 </tbody>
             </table>
+            @if (Model.Warnings.Any())
+            {
+                <div class="alert alert-warning" role="alert">
+                    <div class="fw-bold mb-1">- 注意 -</div>
+                    <ul class="list-unstyled mb-0">
+                        @foreach (var warning in Model.Warnings)
+                        {
+                            <li>@warning</li>
+                        }
+                    </ul>
+                </div>
+            }
 
             <form>
                 @*POSTリクエスト(Register/Back)に値を渡すためにhidden属性を使う*@
