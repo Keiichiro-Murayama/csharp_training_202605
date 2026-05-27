@@ -32,7 +32,8 @@
     </None>
     <None Include="sql/init_null.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </None>   
+
   </ItemGroup>
 
   <ItemGroup>

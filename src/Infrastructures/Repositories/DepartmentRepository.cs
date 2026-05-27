@@ -65,11 +65,6 @@ public class DepartmentRepository : IDepartmentRepository
         {
             throw;
         }
-        catch (Exception e)
-        {
-            throw new InternalException(
-                "すべての部署を取得できませんでした。", e);
-        }
     }
 
     /// <summary>

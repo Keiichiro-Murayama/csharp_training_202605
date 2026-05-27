@@ -48,12 +48,6 @@ public class EmpStatusRepository : IEmpStatusRepository
             return results;
         }
         catch(InternalException){throw;}
-        catch (Exception e)
-        {
-
-            throw new InternalException(
-                "すべての雇用形態を取得できませんでした。", e);
-        }
     }
 
     /// <summary>
@@ -75,7 +69,7 @@ public class EmpStatusRepository : IEmpStatusRepository
         catch (Exception e)
         {
             throw new InternalException(
-                "指定された部署Idの部署を取得できませんでした。", e);
+                "指定された雇用形態Idの雇用形態を取得できませんでした。", e);
         }
     }
 }
