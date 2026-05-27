@@ -41,11 +41,8 @@ public class EmployeeRepository : IEmployeeRepository
     {
         try
         {
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
 
             var entity = _adapter.Convert(employee);
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< FIN ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
-            System.Console.WriteLine($"entity:{entity.EmpId},{entity.EmpName},{entity.EmpEmail}, {entity.DepId},{entity.EmpStatusId}");
             _context.Employees.Add(entity);
             _context.SaveChanges();
         }
@@ -62,15 +59,28 @@ public class EmployeeRepository : IEmployeeRepository
     /// <returns></returns>
     public List<Employee> FindAll()
     {
-        List<EmployeeEntity> employeeEntityList = _context.Employees.ToList();
-
-        List<Employee> employeeList = new List<Employee>();
-        foreach (var employeeEntity in employeeEntityList)
+        try
         {
-            Employee employee = _adapter.Restore(employeeEntity);
-            employeeList.Add(employee);
+
+            List<EmployeeEntity> employeeEntityList = _context.Employees.ToList();
+            List<Employee> employeeList = new List<Employee>();
+            foreach (var employeeEntity in employeeEntityList)
+            {
+                Employee employee = _adapter.Restore(employeeEntity);
+                employeeList.Add(employee);
+            }
+
+            if (employeeEntityList.Count == 0)
+            {
+                throw new InternalException("登録された従業員記録はありません");
+            }
+            return employeeList;
+        }
+        catch (Exception e)
+        {
+            throw new InternalException("すべての部署を取得できませんでした。", e);
         }
 
-        return employeeList;
+
     }
 }

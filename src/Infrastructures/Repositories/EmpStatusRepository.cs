@@ -30,16 +30,12 @@ public class EmpStatusRepository : IEmpStatusRepository
     /// <returns>部署のリスト</returns>
     public List<EmpStatus> FindAll()
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< StartFindAll >>>>>>>>>>>>>>>>>>>>>>");
 
         try
         {
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< Start TRY FINDALL >>>>>>>>>>>>>>>>>>>>>>");
             var entities = _context.EmpStatuses.ToList();
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< GetEntity >>>>>>>>>>>>>>>>>>>>>>");
 
             var results = new List<EmpStatus>();
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< getResult >>>>>>>>>>>>>>>>>>>>>>");
 
             foreach (var entity in entities)
             {
@@ -49,7 +45,6 @@ public class EmpStatusRepository : IEmpStatusRepository
         }
         catch (Exception e)
         {   
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< Start Catch FINDALL >>>>>>>>>>>>>>>>>>>>>>");
 
             throw new InternalException(
                 "すべての部署を取得できませんでした。", e);

@@ -48,30 +48,30 @@ public class EmpStatus
         }
     }
 
-    /// <summary>
-    ///雇用形態名の変更
-    /// </summary>
-    /// <param name="name"></param>
-    public void ChangeName(string? name)
-    {
-        //雇用形態名のルール検証
-        validateEmpStatusName(name);
-        this.Name = name;
-    }
+    // /// <summary>
+    // ///雇用形態名の変更
+    // /// </summary>
+    // /// <param name="name"></param>
+    // public void ChangeName(string? name)
+    // {
+    //     //雇用形態名のルール検証
+    //     validateEmpStatusName(name);
+    //     this.Name = name;
+    // }
 
-    /// <summary>
-    /// 等価性の検証
-    /// </summary>
-    /// <param name="obj"></param>
-    /// <returns></returns>
-    public override bool Equals(object? obj)
-    {
-        if (ReferenceEquals(this, obj)) return true;
-        if (obj is not EmpStatus other) return false;
-        return Id == other.Id;
-    }
-    public override int GetHashCode() => Id?.GetHashCode() ?? 0;
+    // /// <summary>
+    // /// 等価性の検証
+    // /// </summary>
+    // /// <param name="obj"></param>
+    // /// <returns></returns>
+    // public override bool Equals(object? obj)
+    // {
+    //     if (ReferenceEquals(this, obj)) return true;
+    //     if (obj is not EmpStatus other) return false;
+    //     return Id == other.Id;
+    // }
+    // public override int GetHashCode() => Id?.GetHashCode() ?? 0;
 
-    public override string ToString() => $"{Id?.ToString() ?? "未登録"}: {Name}";
+    // public override string ToString() => $"{Id?.ToString() ?? "未登録"}: {Name}";
 
 }

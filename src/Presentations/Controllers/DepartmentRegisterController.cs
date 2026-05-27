@@ -92,8 +92,6 @@ public class DepartmentRegisterController : Controller
     [HttpPost("Register")]
     public IActionResult Register(DepartmentRegisterViewModel viewModel)
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< ON Register >>>>>>>>>>>>>>>>>>>>>>");
-
         // DepartmentRegisterViewModelをシリアライズして、TempDataに保存する
         _empDataStore.Save(this, viewModel);
         // 登録処理GETアクションメソッドにリダイレクトする

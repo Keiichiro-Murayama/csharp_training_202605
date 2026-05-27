@@ -64,4 +64,37 @@ public class DepartmentRepositoryTests
 
         Assert.AreEqual("部署の永続化ができませんでした。", ex.Message);
     }
+    
+    [TestMethod]
+    public void FindAll_Success()
+    {
+        List<Department> departmentList = _repository.FindAll();
+
+        var department1 = new Department("人事部");
+        var department2 = new Department("総務部");
+        var department3 = new Department("経理部");
+
+
+        List<Department> expected = new List<Department>{department1, department2, department3};
+
+        Assert.AreEqual(department1.Name, departmentList[0].Name);
+        Assert.AreEqual(department2.Name, departmentList[1].Name);
+        Assert.AreEqual(department3.Name, departmentList[2].Name);
+    }
+
+    [TestMethod]
+    public void FindById_Success()
+    {
+        int searchId = 1; 
+        Department searched = _repository.FindById(searchId)!;
+        Assert.AreEqual("人事部", searched.Name);
+    }
+
+    [TestMethod]
+    public void FindById_ReturnNull()
+    {
+        int searchId = 10; 
+        Department? searched = _repository.FindById(searchId);
+        Assert.AreEqual(null, searched?.Name);
+    }
 }

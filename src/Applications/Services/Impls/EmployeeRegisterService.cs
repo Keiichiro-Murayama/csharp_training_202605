@@ -74,16 +74,12 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     /// <returns></returns>
     public EmpStatus GetEmpStatusById(int id)
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START GET EMP BYID >>>>>>>>>>>>>>>>>>>>>>");
-
         var result = _empStatusRepository.FindById(id)!;
         if (result == null)
         {
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< GET EMP BYID FAIL >>>>>>>>>>>>>>>>>>>>>>");
             throw new NotFoundException($"部署Id{id}に該当する部署は存在しません");
 
         }
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< GET EMP BYID SUCCESS >>>>>>>>>>>>>>>>>>>>>>");
 
         return result;
     }
@@ -94,7 +90,6 @@ public class EmployeeRegisterService : IEmployeeRegisterService
     /// <returns></returns>
     public List<EmpStatus> GetEmpStatuses()
     {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< Start GetEmpStatuses >>>>>>>>>>>>>>>>>>>>>>");
 
         return _empStatusRepository.FindAll();
     }
@@ -111,8 +106,6 @@ public class EmployeeRegisterService : IEmployeeRegisterService
         }
         try
         {
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START REGISTER ON SERVICE >>>>>>>>>>>>>>>>>>>>>>");
-
             // トランザクションの開始
             _context.Database.BeginTransaction();
             // 従業員の登録

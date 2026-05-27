@@ -17,11 +17,9 @@ public class DepartmentRegisterViewModelAdapter : IRestorer<Department, Departme
     public Department Restore(DepartmentRegisterViewModel target)
     {
         // Department(部署)を作成する
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START RESTORE >>>>>>>>>>>>>>>>>>>>>>");
 
         // 登録するDepartment(従業員)を作成する
         var department = new Department(target.Name!);
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< END RESTORE >>>>>>>>>>>>>>>>>>>>>>");
         return department;
     }
 }

@@ -39,7 +39,6 @@ public class Department
     {
         if (name is not null)
         {
-        System.Console.WriteLine("<<<<<<<<<<<<<<<<<< HAS NAME START VALIDATE >>>>>>>>>>>>>>>>>>>>>>");
 
             if (string.IsNullOrWhiteSpace(name))
                 throw new DomainException("部署名は必須です");
@@ -48,29 +47,29 @@ public class Department
         }
     }
 
-    /// <summary>
-    /// 部署名の変更
-    /// </summary>
-    /// <param name="name"></param>
-    public void ChangeName(string? name)
-    {
-        // 部署名のルール検証
-        validateDepartmentName(name);
-        this.Name = name;
-    }
+    // /// <summary>
+    // /// 部署名の変更
+    // /// </summary>
+    // /// <param name="name"></param>
+    // public void ChangeName(string? name)
+    // {
+    //     // 部署名のルール検証
+    //     validateDepartmentName(name);
+    //     this.Name = name;
+    // }
 
-    /// <summary>
-    /// 等価性の検証
-    /// </summary>
-    /// <param name="obj"></param>
-    /// <returns></returns>
-    public override bool Equals(object? obj)
-    {
-        if (ReferenceEquals(this, obj)) return true;
-        if (obj is not Department other) return false;
-        return Id == other.Id;
-    }
-    public override int GetHashCode() => Id?.GetHashCode() ?? 0;
+    // /// <summary>
+    // /// 等価性の検証
+    // /// </summary>
+    // /// <param name="obj"></param>
+    // /// <returns></returns>
+    // public override bool Equals(object? obj)
+    // {
+    //     if (ReferenceEquals(this, obj)) return true;
+    //     if (obj is not Department other) return false;
+    //     return Id == other.Id;
+    // }
+    // public override int GetHashCode() => Id?.GetHashCode() ?? 0;
 
-    public override string ToString() => $"{Id?.ToString() ?? "未登録"}: {Name}";
+    // public override string ToString() => $"{Id?.ToString() ?? "未登録"}: {Name}";
 }

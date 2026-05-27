@@ -29,11 +29,8 @@ public class DepartmentRepository : IDepartmentRepository
     {
                 try
         {
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< START ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
 
             var entity = _adapter.Convert(department);
-            System.Console.WriteLine("<<<<<<<<<<<<<<<<<< FIN ENTITY CREATE ON REPOSITORY >>>>>>>>>>>>>>>>>>>>>>");
-            System.Console.WriteLine($"entity:{entity.DepId},{entity.DepName}");
             _context.Departments.Add(entity);
             _context.SaveChanges();
         }
