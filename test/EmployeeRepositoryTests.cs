@@ -52,16 +52,16 @@ public class EmployeeRepositoryTests
     {
         var empStatus = new EmpStatus(1, "正社員");
         var department = new Department(1, "人事部");
-        var employee = new Employee("向井理", "Osamu@test.com", empStatus, department);
+        var employee = new Employee("桜井理", "Osamu@test.com", empStatus, department);
         _repository.Create(employee);
 
         var created = _context.Employees
             .Include(e => e.DepartmentEntity)
             .Include(e => e.EmpStatusEntity)
-            .FirstOrDefault(e => e.EmpName == "向井理");
+            .FirstOrDefault(e => e.EmpName == "桜井理");
 
         // IsNotNull(created);
-        AreEqual("向井理", created.EmpName);
+        AreEqual("桜井理", created.EmpName);
     }
 
 
@@ -70,12 +70,12 @@ public class EmployeeRepositoryTests
     {
         var empStatus1 = new EmpStatus(1, "正社員");
         var department1 = new Department(1, "人事部");
-        var employee1 = new Employee("向井理", "Osamu@test.com", empStatus1, department1);
+        var employee1 = new Employee("桜井理", "Osamu@test.com", empStatus1, department1);
         _repository.Create(employee1);
 
         var empStatus2 = new EmpStatus(2, "契約社員");
         var department2 = new Department(2, "総務部");
-        var employee2 = new Employee("手塚治虫", "Osamu@test.com", empStatus2, department2);
+        var employee2 = new Employee("山田修", "Osamu@test.com", empStatus2, department2);
 
 
         var ex = Assert.ThrowsException<InternalException>(() =>

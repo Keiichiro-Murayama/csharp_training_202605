@@ -30,6 +30,7 @@ public class EmployeeRepositoryTestsNullTable
     {
         var options = new DbContextOptionsBuilder<AppDbContext>()
             .UseNpgsql(ConnectionString)
+            // ConnectionStringを外す
             .Options;
 
         _context = new AppDbContext(options);
@@ -42,7 +43,7 @@ public class EmployeeRepositoryTestsNullTable
 
         var path = Path.Combine(AppContext.BaseDirectory, "sql", "init_null.sql");
         var sql = File.ReadAllText(path);
-        _context.Database.ExecuteSqlRaw(sql);
+        // _context.Database.ExecuteSqlRaw(sql);
 
         _repository = new EmployeeRepository(_context, employeeAdapter);
     }

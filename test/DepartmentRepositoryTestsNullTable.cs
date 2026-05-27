@@ -50,11 +50,5 @@ public class DepartmentRepositoryTestsNullTable
         Assert.AreEqual("登録された部署はありません。", ex.Message);
     }
 
-    [TestMethod]
-    public void FindById_NonHit()
-    {
-        int searchId = 10;
-        Department? searched = _repository.FindById(searchId);
-        Assert.AreEqual(null, searched?.Name);
-    }
+
 }

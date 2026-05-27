@@ -29,7 +29,6 @@ public class DepartmentRepository : IDepartmentRepository
     {
         try
         {
-
             var entity = _adapter.Convert(department);
             _context.Departments.Add(entity);
             _context.SaveChanges();
