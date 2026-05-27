@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "従業員一覧";
 }
-<h2 class="text-center mt-4">@ViewData["Title"]</h2>
+<h2 class="text-center fw-bold mt-5 mb-5">@ViewData["Title"]</h2>
 
 <!-- Table styling -->
 <style>
@@ -36,42 +36,44 @@
 
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>氏名</th>
-                    <th>メールアドレス</th>
-                    <th>所属部署</th>
-                    <th>雇用形態</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var emp in Model)
-                {
+        <div class="d-grid col-6">
+            <table>
+                <thead>
                     <tr>
-                        <td>@emp.Id</td>
-                        <td>@emp.Name</td>
-                        <td>@emp.Email</td>
-                        @if (emp.DepName is null)
-                        {
-                            <td>-</td>
-                        }
-                        else
-                        {
-                            <td>@emp.DepName</td>
-                        }
-                        @if (emp.EmpStatusName is null)
-                        {
-                            <td>-</td>
-                        }
-                        else
-                        {
-                            <td>@emp.EmpStatusName</td>
-                        }
+                        <th>ID</th>
+                        <th>氏名</th>
+                        <th>メールアドレス</th>
+                        <th>所属部署</th>
+                        <th>雇用形態</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var emp in Model)
+                    {
+                        <tr>
+                            <td>@emp.Id</td>
+                            <td>@emp.Name</td>
+                            <td>@emp.Email</td>
+                            @if (emp.DepName is null)
+                            {
+                                <td>-</td>
+                            }
+                            else
+                            {
+                                <td>@emp.DepName</td>
+                            }
+                            @if (emp.EmpStatusName is null)
+                            {
+                                <td>-</td>
+                            }
+                            else
+                            {
+                                <td>@emp.EmpStatusName</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
 @{
     ViewData["Title"] = "部署一覧";
 }
-<h2 class="text-center mt-4">@ViewData["Title"]</h2>
+<h2 class="text-center fw-bold mt-5 mb-5">@ViewData["Title"]</h2>
 
 <!-- Table styling -->
 <style>
@@ -36,22 +36,24 @@
 
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>部署名</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var dep in Model)
-                {
+        <div class="d-grid col-6">
+            <table>
+                <thead>
                     <tr>
-                        <td>@dep.Id</td>
-                        <td>@dep.Name</td>
+                        <th>ID</th>
+                        <th>部署名</th>
                     </tr>
-                }
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach (var dep in Model)
+                    {
+                        <tr>
+                            <td>@dep.Id</td>
+                            <td>@dep.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

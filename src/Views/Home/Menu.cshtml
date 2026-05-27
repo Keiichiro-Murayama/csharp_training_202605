@@ -1,28 +1,31 @@
 @{
-    ViewData["Title"] = "人事管理アプリケーション";
+    ViewData["Title"] = "Manage HR";
 }
-<h2 class="text-center mt-4">@ViewData["Title"]</h2>
+<h2 class="text-center fw-bold mt-5 mb-5">@ViewData["Title"]</h2>
 
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="d-grid gap-4 col-6 mx-auto">
-            <h3>＜従業員管理＞</h3>
-            <form asp-controller="EmployeeRegister" asp-action="Enter" method="get">
-                <button type="submit" class="btn btn-primary btn-lg"  style="width: 100%;">従業員登録</button>
-            </form>
-           
-            <form asp-controller="EmployeeShowList" asp-action="List" method="get">
-                <button type="submit" class="btn btn-primary btn-lg"  style="width: 100%;">従業員一覧</button>
-            </form>
+        <div class="d-grid gap-5 col-6 mx-auto">
+            <div class="d-grid gap-2">
+                <h4 class="fw-semibold">従業員管理</h4>
+                <form asp-controller="EmployeeRegister" asp-action="Enter" method="get">
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">従業員登録</button>
+                </form>
 
-            <h3>＜部署管理＞</h3>
-            <form asp-controller="DepartmentRegister" asp-action="Enter" method="get">
-                <button type="submit" class="btn btn-primary btn-lg"  style="width: 100%;">部署登録</button>
-            </form>
-           
-            <form asp-controller="DepartmentShowList" asp-action="List" method="get">
-                <button type="submit" class="btn btn-primary btn-lg"  style="width: 100%;">部署一覧</button>
-            </form>
+                <form asp-controller="EmployeeShowList" asp-action="List" method="get">
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">従業員一覧</button>
+                </form>
+            </div>
+            <div class="d-grid gap-2">
+                <h4 class="fw-semibold">部署管理</h4>
+                <form asp-controller="DepartmentRegister" asp-action="Enter" method="get">
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">部署登録</button>
+                </form>
+
+                <form asp-controller="DepartmentShowList" asp-action="List" method="get">
+                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">部署一覧</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
