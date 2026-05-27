@@ -84,4 +84,26 @@ public class EmployeeRepositoryTests
 
         Assert.AreEqual("従業員の永続化ができませんでした。", ex.Message);
     }
+
+    [TestMethod]
+    public void Create_DuplicateEmail()
+    {
+        var empStatus1 = new EmpStatus(1, "正社員");
+        var department1 = new Department(1, "人事部");
+        var employee1 = new Employee("向井理", "Osamu@test.com", empStatus1, department1);
+        _repository.Create(employee1);
+
+        var empStatus2 = new EmpStatus(2, "契約社員");
+        var department2 = new Department(2, "総務部");
+        var employee2 = new Employee("手塚治虫", "Osamu@test.com", empStatus2, department2);
+
+
+        var ex = Assert.ThrowsException<InternalException>(() =>
+        {
+            _repository.Create(employee2);
+        }
+        );
+
+        Assert.AreEqual("従業員の永続化ができませんでした。", ex.Message);
+    }
 }
