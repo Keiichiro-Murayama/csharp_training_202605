@@ -17,7 +17,7 @@ public class DepartmentRepository : IDepartmentRepository
     /// ドメインモデル:部署と部署エンティティの相互変換インターフェイスの実装
     /// </summary>
     private readonly DepartmentEntityAdapter _adapter;
-    
+
     public DepartmentRepository(AppDbContext context, DepartmentEntityAdapter adapter)
     {
         _context = context;
@@ -27,7 +27,7 @@ public class DepartmentRepository : IDepartmentRepository
     ///部署登録　
     public void Create(Department department)
     {
-                try
+        try
         {
 
             var entity = _adapter.Convert(department);
@@ -54,8 +54,16 @@ public class DepartmentRepository : IDepartmentRepository
             foreach (var entity in entities)
             {
                 results.Add(_adapter.Restore(entity));
-            }   
+            }
+            if (results.Count == 0)
+            {
+                throw new InternalException("登録された部署はありません。");
+            }
             return results;
+        }
+        catch (InternalException)
+        {
+            throw;
         }
         catch (Exception e)
         {
