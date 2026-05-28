@@ -24,7 +24,7 @@
                     @* Tag Helperがname属性やid属性を自動生成 Model Bindingに必要なHTMLが作成される*@
                     <label asp-for="Email" class="form-label"></label>
                     <input asp-for="Email" class="form-control" />
-                    @* <span asp-validation-for="Email" class="text-danger"></span> *@
+                    <span asp-validation-for="Email" class="text-danger"></span>
                     @if (TempData["ErrorMessage"] is not null)
                     {
                         <span class="text-danger">@TempData["ErrorMessage"]</span>
