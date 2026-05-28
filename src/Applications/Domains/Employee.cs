@@ -61,35 +61,5 @@ public class Employee
         }
     }
 
-    // /// <summary>
-    // /// 氏名を変更する
-    // /// </summary>
-    // public void ChangeName(string name)
-    // {
-    //     ValidateName(name);
-    //     Name = name;
-    // }
 
-    // /// <summary>
-    // /// 所属部署を変更する
-    // /// </summary>
-    // public void ChangeDepartment(Department? department)
-    // {
-    //     Department = department;
-    // }
-
-    // /// <summary>
-    // /// 等価性（IDによる比較）
-    // /// </summary>
-    // public override bool Equals(object? obj)
-    // {
-    //     if (ReferenceEquals(this, obj)) return true;
-    //     if (obj is not Employee other) return false;
-    //     return Id == other.Id;
-    // }
-
-    // public override int GetHashCode() => Id?.GetHashCode() ?? 0;
-
-    // public override string ToString()
-    //     => $"{Id?.ToString() ?? "未登録"}: {Name} / {Department?.Name ?? "未配属"}";
 }
